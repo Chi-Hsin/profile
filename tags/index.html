@@ -210,9 +210,21 @@
 
 
 
-
 <nav class="site-nav">
   
+<div class="popup search-popup local-search-popup" style="display: block;">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜尋..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
     <ul id="menu" class="menu">
       
         
@@ -263,7 +275,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜尋</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />關鍵字搜尋</a>
         </li>
       
     </ul>
