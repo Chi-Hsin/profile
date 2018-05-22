@@ -108,7 +108,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="卡片怪獸資料站">
-<meta property="og:url" content="https://chi-hsin.github.io/cardmonster/tags/戰爭/page/3/index.html">
+<meta property="og:url" content="https://chi-hsin.github.io/cardmonster/404/index.md">
 <meta property="og:site_name" content="卡片怪獸資料站">
 <meta property="og:locale" content="zh-TW">
 <meta name="twitter:card" content="summary">
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="https://chi-hsin.github.io/cardmonster/tags/戰爭/page/3/"/>
+  <link rel="canonical" href="https://chi-hsin.github.io/cardmonster/404/index.md"/>
 
 
 
@@ -129,7 +129,7 @@
   };
 </script>
 
-  <title>標籤: 戰爭 | 卡片怪獸資料站</title>
+  <title> | 卡片怪獸資料站</title>
   
 
 
@@ -176,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,7 +247,7 @@
         
         
           
-          <li class="menu-item menu-item-標籤索引 menu-item-active">
+          <li class="menu-item menu-item-標籤索引">
     <a href="/cardmonster/tags" rel="section">
       <i class="menu-item-icon fa fa-fw fa-bath"></i> <br />標籤索引</a>
   </li>
@@ -348,309 +348,150 @@
           <div id="content" class="content">
             
 
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = '';
+        this.page.identifier = '404/index.md';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//abc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>戰爭<small>標籤</small>
-        </h1>
-      </div>
-        
-          
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/cardmonster/cardmonster/404/index.md">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/cardmonster/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="卡片怪獸資料站">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/白鴿劍士/" itemprop="url">
+        
+          <h1 class="post-title" itemprop="name headline">
               
-                <span itemprop="name">白鴿劍士</span>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </a>
-        
-      </h2>
+                <span class="post-meta-item-text">發表於</span>
+              
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
+              
+                
+              
 
-    </header>
-  </article>
+              <time title="創建時間：Invalid date Invalid date" itemprop="dateCreated datePublished" datetime="Invalid date">Invalid date</time>
+            
 
+            
+          </span>
 
-        
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/瞌睡惡魔/" itemprop="url">
-              
-                <span itemprop="name">瞌睡惡魔</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/漁夫獵人/" itemprop="url">
-              
-                <span itemprop="name">漁夫獵人</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
+          
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/狼騎統帥/" itemprop="url">
-              
-                <span itemprop="name">狼騎統帥</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/紅龍/" itemprop="url">
-              
-                <span itemprop="name">紅龍</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/綠穴巨人/" itemprop="url">
-              
-                <span itemprop="name">綠穴巨人</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
           
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+        </div>
+      </header>
+    
 
-      <h2 class="post-title">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/聖殿守護者/" itemprop="url">
-              
-                <span itemprop="name">聖殿守護者</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
-          
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/獵犬斥侯/" itemprop="url">
-              
-                <span itemprop="name">獵犬斥侯</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
-          
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/迷失的探險者/" itemprop="url">
-              
-                <span itemprop="name">迷失的探險者</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
-          
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/cardmonster/怪獸/戰爭/破天者/" itemprop="url">
-              
-                <span itemprop="name">破天者</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-07T21:02:04+08:00"
-              content="2018-05-07" >
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-        
+      
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/cardmonster/tags/戰爭/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/cardmonster/tags/戰爭/">1</a><a class="page-number" href="/cardmonster/tags/戰爭/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/cardmonster/tags/戰爭/page/4/">4</a><a class="extend next" rel="next" href="/cardmonster/tags/戰爭/page/4/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1149,6 +990,10 @@
 
 
   
+  <script type="text/javascript" src="/cardmonster/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/cardmonster/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
