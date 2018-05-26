@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[工具的使用_截圖2]]></title>
+    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%962%2F</url>
+    <content type="text"><![CDATA[--- title: 工具的使用_截圖2 date: 2018-05-26 16:22:36 tags: - 工具 --- {% asset_img 0.jpg %} 繼上一章的工具的使用後 今天要介紹的是其他軟體的截圖工具 例如我們日常使用的通訊軟體 都有這個功能 {% asset_img 1.jpg %} *** LINE === 這是LINE不久前推出的功能 按下即可截圖 {% asset_img 2.gif %} *** QQ === 也有這個功能 快捷鍵是Ctrl+Alt+A {% asset_img 3.gif %} *** 最後介紹一個頗有知名度的剪輯軟體的公司 ApowerSoft === 這在Google搜尋都能夠找到 它做的這款截圖軟體 只要按下快捷鍵也能立即截圖 更能直接做簡易的編輯 {% asset_img 4.jpg %} 它的功能也更多 能夠用的工具也比較容易操作 這是目前筆者正在使用的截圖工具 有一段免費試用期 {% asset_img 5.gif %} 要注意的是 如果有同時用QQ通訊軟體 他們快捷鍵會衝突 需另外設置]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[工具的使用_截圖]]></title>
     <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%96%2F</url>
     <content type="text"><![CDATA[--- title: 工具的使用_截圖 date: 2018-05-26 16:22:36 tags: - 工具 --- 本站第一篇文章 {% asset_img 1.png %} 今天要介紹截圖工具的使用 首先是截圖的使用方法 筆電與桌機 (筆電) Fn按著不放+右上角的PrintScreen(可能簡寫Ptrsc) {% asset_img 2.jpg 筆電鍵盤按法 %} (桌機) 桌機一般來說只要按住PrintScreen就行了 {% asset_img 3.jpg 桌機鍵盤按法 %} 那麼接下來做什麼呢? 到小畫家貼上就好 如果找不到小畫家呢? {% asset_img 4.jpg 小畫家位置 %} 剪貼簿貼上 或者你也能到擁有的繪圖軟體 如:Photoshop貼上圖片 它會使用剪貼簿的方式貼上圖片 例如我們今天截圖650*435Pixl的圖 你只需要開新檔案 它就會幫你開一個一樣長寬的剪貼簿 貼上的時候就是會符合圖片的大小 {% asset_img 5.jpg 剪貼簿貼上 %}]]></content>
@@ -9,9 +17,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[工具的使用_截圖2]]></title>
-    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%962%2F</url>
-    <content type="text"><![CDATA[--- title: 工具的使用_截圖2 date: 2018-05-26 16:22:36 tags: - 工具 --- {% asset_img 0.jpg %} 繼上一章的工具的使用後 今天要介紹的是其他軟體的截圖工具 例如我們日常使用的通訊軟體 都有這個功能 {% asset_img 1.jpg %} *** LINE 這是LINE不久前推出的功能 按下即可截圖 {% asset_img 2.gif %} *** QQ 也有這個功能 快捷鍵是Ctrl+Alt+A {% asset_img 3.gif %} *** 最後介紹一個頗有知名度的剪輯軟體的公司 ApowerSoft 這在Google搜尋都能夠找到 它做的這款截圖軟體 只要按下快捷鍵也能立即截圖 更能直接做簡易的編輯 {% asset_img 4.jpg %} 它的功能也更多 能夠用的工具也比較容易操作 這是目前筆者正在使用的截圖工具 有一段免費試用期 {% asset_img 5.gif %} 要注意的是 如果有同時用QQ通訊軟體 他們快捷鍵會衝突 需另外設置]]></content>
+    <title><![CDATA[工具的使用_製作GIF]]></title>
+    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%A3%BD%E4%BD%9CGIF%2F</url>
+    <content type="text"><![CDATA[--- title: 工具的使用_製作GIF date: 2018-05-26 07:56:37 tags: - 工具 --- {% asset_img 0.gif %} 現在來介紹 有時候我們簡短的滑鼠的一個MOVE動作 不想拍影片那麼費工 想要拍成GIF動圖 該怎麼做呢? *** {% asset_img 1.jpg GIF_Cam畫面 %} 使用方法為 {% asset_img 2.jpg GIF_Cam步驟 %} 框選的範圍不宜過大，會讓檔案大小也會變大 最後要注意的是 如果要拍下一張GIF時 要記得按New清除上一張的紀錄 PS.第一章圖就是沒有清空的下場 *** > 官方載點：https://gifcam.en.softonic.com/ > 備用載點: https://drive.google.com/open?id=1Gzj2N2FjB88acR7uK6WtA8kWQK6ZQBvv]]></content>
       <tags>
         <tag>工具</tag>
       </tags>
@@ -19,7 +27,7 @@
   <entry>
     <title><![CDATA[新的主題測試]]></title>
     <url>%2Fprofile%2F%E6%96%B0%E7%9A%84%E4%B8%BB%E9%A1%8C%E6%B8%AC%E8%A9%A6%2F</url>
-    <content type="text"><![CDATA[--- title: 新的主題測試 date: 2018-05-05 16:22:36 tags: --- ~~貸款抓住促進數量伊拉克描述物品計算五年反覆娛樂房產，完成之處網頁對不起猶豫和平業務感染文章輔，以外閲讀者深圳確實見過定義躺在主演授權醫院存款以，不在擴大儀器電源專家網際姐姐域名到底明確，一流要去域名運行平台簡介斑竹，改革留學相冊正好官方去年沒事模組時刻我家廣場學會也沒某種如同，同時而來你想深圳反正藥品拿出治理，人生怎麼排行最為總數，校園功夫提醒樓上不到大，更是素質明確位於的錢理由居住登記不怕本，工藝兩年有着鏡頭特別你不這個新技術並不微軟解決方，菜單形成肌膚越來越適應地上出席編程在線是的當前百萬當初世，人民共和國不滿自身一會，法國結構科研語文用途矛盾快速安徽重新改進又是製品一，聯繫方式一切都設施美元真正類型條款真正對此中介以外廈門願意，發出夢想至於開展很少獲取今日意外我去存儲下列，進入體力公安驚訝不肯好像服飾當然文件辛苦攝影，其它不夠站在每頁而是請，以上怎麼辦伊拉克這段四川幾乎哈哈產品概念轎車無，難以刷新任意祝福跟我本報，靈活影片案例他是狀態一大經濟，成熟自治區保證付出堅決意義休息印象查找讓他物質分享留下門口你，樣子人們採購動畫新聞網也，孤獨權限有一些當時開始促進輸出相當分享好友允許，。~~ ![aaa](/cardmonster/img/38401_1559808918821_2753383_n.jpg) ![aaa](/cardmonster/img/39359_124691630910608_812022_n.jpg) ![bbb](https://i.imgur.com/Xzqi180.gif) | Item|Value|Qty|QQQy| | :-------:| :----:| :----:|:---:| | Computer | $1600 | 5 | 5 | | Phone | $12 | 12 | 5 | | Pipe | $1 | 234 | 5 |]]></content>
+    <content type="text"><![CDATA[--- title: 新的主題測試 date: 2018-05-05 16:22:36 tags: --- ~~貸款抓住促進數量伊拉克描述物品計算五年反覆娛樂房產下門口你，樣子人們採購動畫新聞網也，孤獨權限有一些當時開始促進輸出相當分享好友允許，。~~ ![aaa](/cardmonster/img/38401_1559808918821_2753383_n.jpg) ![aaa](/cardmonster/img/39359_124691630910608_812022_n.jpg) ![bbb](https://i.imgur.com/Xzqi180.gif) | Item|Value|Qty|QQQy| | :-------:| :----:| :----:|:---:| | Computer | $1600 | 5 | 5 | | Phone | $12 | 12 | 5 | | Pipe | $1 | 234 | 5 | > This is the first level of quoting. > > > This is nested blockquote. > > >Back to the first level. 1. This is a list item with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit. 2. Suspendisse id sem consectetuer libero luctus adipiscing. * A list item with a code block: *** 我是程式碼 This is [an example](http://example.com/ "Title") inline link. [This link](http://example.net/) has no title attribute. I get 10 times more traffic from [Google][] than from [Yahoo][] or [MSN][]. [google]: http://google.com/ "Google" [yahoo]: http://search.yahoo.com/ "Yahoo Search" [msn]: http://search.msn.com/ "MSN Search" Use the `printf()` function. A single backtick in a code span: `` ` `` A backtick-delimited string in a code span: `` `foo` `` -aaa]]></content>
   </entry>
   <entry>
     <title></title>
@@ -32,14 +40,14 @@
     <content type="text"><![CDATA[--- title: tags date: 2018-05-08 14:41:53 type: tags ---]]></content>
   </entry>
   <entry>
-    <title><![CDATA[關於]]></title>
-    <url>%2Fprofile%2F%E9%97%9C%E6%96%BC%2Findex.html</url>
-    <content type="text"><![CDATA[--- title: 關於 date: 2018-05-10 00:04:05 comments: false --- 世界上的每個人 就負責一座高塔就好了 希望我的文章也能幫到需要的人 恩，總會有人需要的]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[分類搜尋]]></title>
     <url>%2Fprofile%2F%E5%88%86%E9%A1%9E%E6%90%9C%E5%B0%8B%2Findex.html</url>
     <content type="text"><![CDATA[--- title: 分類搜尋 date: 2018-05-08 14:47:13 type: categories ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[關於]]></title>
+    <url>%2Fprofile%2F%E9%97%9C%E6%96%BC%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 關於 date: 2018-05-10 00:04:05 comments: false --- 世界上的每個人 就負責一座高塔就好了 希望我的文章也能幫到需要的人 恩，總會有人需要的]]></content>
   </entry>
   <entry>
     <title></title>
