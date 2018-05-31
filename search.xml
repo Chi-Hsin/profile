@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[火焰累積傷害]]></title>
+    <url>%2Fprofile%2F%E7%81%AB%E7%84%B0%E7%B4%AF%E7%A9%8D%E5%82%B7%E5%AE%B3%2F</url>
+    <content type="text"><![CDATA[--- title: 火焰累積傷害 date: 2018-06-01 07:56:37 tags: - 遊戲註記 --- 看到了Generator的教程 一種累積性傷害的技能 似乎可以這樣計算~~(自己亂創)~~ 每回合next一次 雖然裏頭有提到可以跟AJAX配合使用 但是目前還是聽不太懂 目前的狀態 {% asset_img 1.jpg %} function* fire_status(max) { //製作一個產生器 var i = 0; var aaa = 0; while(i]]></content>
+      <tags>
+        <tag>遊戲註記</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[工具的使用_截圖2]]></title>
     <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%962%2F</url>
     <content type="text"><![CDATA[--- title: 工具的使用_截圖2 date: 2018-05-26 16:22:36 tags: - 工具 --- {% asset_img 0.jpg %} 繼上一章的工具的使用後 今天要介紹的是其他軟體的截圖工具 例如我們日常使用的通訊軟體 都有這個功能 {% asset_img 1.jpg %} *** LINE === 這是LINE不久前推出的功能 按下即可截圖 {% asset_img 2.gif %} *** QQ === 也有這個功能 快捷鍵是Ctrl+Alt+A {% asset_img 3.gif %} *** 最後介紹一個頗有知名度的剪輯軟體的公司 ApowerSoft === 這在Google搜尋都能夠找到 它做的這款截圖軟體 只要按下快捷鍵也能立即截圖 更能直接做簡易的編輯 {% asset_img 4.jpg %} 它的功能也更多 能夠用的工具也比較容易操作 這是目前筆者正在使用的截圖工具 有一段免費試用期 {% asset_img 5.gif %} 要注意的是 如果有同時用QQ通訊軟體 他們快捷鍵會衝突 需另外設置]]></content>
