@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[正則表達式練習]]></title>
+    <url>%2Fprofile%2F%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F%E7%B7%B4%E7%BF%92%2F</url>
+    <content type="text"><![CDATA[--- title: 正則表達式練習 date: 2018-06-02 07:56:37 tags: - 筆記 --- img{max-width:300px;} 之前弄資料庫的時候 有碰到簡易的Regexp的表達 可以很容易的篩選出想要的結果 苦於那個時候急於速成 無法了解透徹 利用這段時間 了解一些基礎的應用 我的心如同壓扁的拉拉熊 {% asset_img 1.png %} 其中有提到以下的字串如何用正規式表達 var should_pass = ['someone@gmail.com', 'bill.gates@microsoft.com', 'tom@voyager.org', 'bob2015@163.com'] //應該要判斷成功 var should_fail = ['test#gmail.com', 'bill@microsoft', 'bill%gates@ms.com', '@voyager.org']; //應該要判斷失敗 答案有很多種(基於不同需求) > 第一個字串是最基本的電子郵件形式 以英文字母或數字為開頭 所以先 /^\w/ > 第二個是中間有一個點 但是我並不清楚.是否前面要加\來跳脫字元 好像有時候報錯 有時候可以 後面加了一個點 . 因為不只一個字符 所以到目前為止應該是 var re = /^\w.+/; 後面要接小老鼠以及英文字 變成 var re = /^\w.+@\w+/; > 綜合第二個跟第三個字串 >必須要.com 以及.org結尾 var re = /^\w.+@\w+.(com|org)$/; >以console.log(re.exec(should_pass)); >是通過的 但是檢測不應該通過的字串也要不能通過 第一個錯誤字串因為我們是用@開頭，所以不會通過 第二個錯誤字串因為我們後面接了.com或org，所以也不會通過 第四個因為我們以數字或字母為開頭，所以也不會通過 問題會發生在第三個字串 字符包括了%，必須過濾掉 [^要過濾的字符] 代表除了這個字符以外的會通過 所以這個時候 var rec = /^\w.[^%]+@\w+.(com|org)$/; 還有一題是分離提取字串 可以用()來分組 很方便吧! *** 其實我也不知道這樣對不對 讓我們來玩顏文字篩選符號吧 用全局搜索試試 只有三個字符的結果 需要注意的是正則表達式(^.....$)不能加 否則只會搜索到一個 var re = /\w{3}/g; var str = "owo OAO www QWQ (つ´ω`)つ A_A AwA d(`･∀･)b"; console.log(re.exec(str)); //顯示控制台測試看看 我等一下會變哦 點我修改上面區塊的內容 點我重設 var test_obj = { re: /\w{3}/g, str: "owo OAO www QWQ (つ´ω`)つ A_A AwA d(`･∀･)b", reset_word: document.getElementById("test").innerHTML, count: 0 }; function change() { if(test_obj.count == 0) { var count = test_obj.str.match(test_obj.re).length; document.getElementById("test").innerHTML = ""; for(var i=0;i]]></content>
+      <tags>
+        <tag>筆記</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[火焰累積傷害]]></title>
     <url>%2Fprofile%2F%E7%81%AB%E7%84%B0%E7%B4%AF%E7%A9%8D%E5%82%B7%E5%AE%B3%2F</url>
     <content type="text"><![CDATA[--- title: 火焰累積傷害 date: 2018-06-01 07:56:37 tags: - 遊戲註記 --- 看到了Generator的教程 一種累積性傷害的技能 似乎可以這樣計算~~(自己亂創)~~ 每回合next一次 雖然裏頭有提到可以跟AJAX配合使用 但是目前還是聽不太懂 目前的狀態 {% asset_img 1.jpg %} function* fire_status(max) { //製作一個產生器 var i = 0; var aaa = 0; while(i]]></content>
