@@ -332,6 +332,234 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/簡單講述this/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/簡單講述this/" itemprop="url">
+                  簡單講述this
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-06-05 07:56:37 / 修改時間：22:19:56" itemprop="dateCreated datePublished" datetime="2018-06-05T07:56:37+08:00">2018-06-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/簡單講述this/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="簡單講述this/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>好熱….<br><img src="/profile/簡單講述this/1.gif"><br>今天來介紹這個在函式中很常使用到的關鍵字<br>它代表的意義不固定  視它出現的時機與環境而有改變<br>以一個簡單的範例為例<br>(詳細的教程在MDN WEB手冊有)</p>
+<pre><code>function f1(){
+  return this;
+}
+f1();
+</code></pre><p>返回的會是什麼呢?<br>.<br>.<br>.<br>.<br>.<br>.<br>window本身或undefined<br>什麼意思呢?<br>核心的概念就是</p>
+<blockquote>
+<p>看調用他的是誰</p>
+</blockquote>
+<p>在上面範例中<br>調用的是最外圍的全局環境<br>也就是window<br>(但是要注意的是，如果使用use strict的嚴格模式  因為並非window直接調用<br>而會顯示為undefined)</p>
+<pre><code>var obj = {
+    birth: 1990,
+    getAge: function () { 
+        var b = this.birth;// 1990
+        var fn = function () {
+            return new Date().getFullYear() - this.birth; //this指向window或undefined
+        };
+        return fn();
+    }
+};
+</code></pre><ol>
+<li><p>上面的b是多少呢?<br>因為obj.getAge()會這樣調用<br>調用的物件是obj，也就是this指向obj<br>又obj.birth找找obj裏頭有這個屬性嗎?<br>有，找到了，1990這個值</p>
+</li>
+<li><p>這裡的this指的又是誰?<br>由於被包起來  fn這個函式實際上是閉包<br>裏頭的變數是私有的(內部的，不會被外界影響)<br>可以看成是身在桃花源之中，它完全是一種獨立的存在<br>如果函數內部沒有birth這個屬性<br>它會找誰?<br>對，找最外面調用這個obj的window<br>那此時，birth的值是undefined</p>
+</li>
+</ol>
+<p>也就是進一步講<br>全局有定義birth的值，它就會試著去找</p>
+<pre><code>var birth = 1950;
+var obj = {
+    birth: 1990,
+    getAge: function () { 
+        var b = this.birth;// 1990
+        var fn = function () {
+            return new Date().getFullYear() - this.birth; // 1950
+        };
+        return fn();
+    }
+};
+</code></pre><p>這樣對this有沒有比較清楚的認知呢?<br>好吧…我知道你現在的表情應該還是<br><img src="/profile/簡單講述this/2.jpg"></p>
+<hr>
+<h1 id="箭頭函數"><a href="#箭頭函數" class="headerlink" title="箭頭函數"></a>箭頭函數</h1><p>以上面為例<br>箭頭函數是用來解決this指向的問題</p>
+<pre><code>var birth = 1950;
+var obj = {
+    birth: 1990,
+    getAge: function () { 
+        var b = this.birth;// 1990
+        var fn =  () =&gt; {
+            return new Date().getFullYear() - this.birth; // 1990
+        };
+        return fn();
+    }
+};
+</code></pre><p>我們可以看到在fn函數的部分被改動了一小段<br>this受限於詞法作用域的緣故(也就是先前提到的內部的私有變數)<br>此時這個this就跟b的this指向的對象同樣為obj<br>那麼，<br>如果getAge()這個屬性的函式也用了箭頭函數表示呢?</p>
+<pre><code>var birth = 1950;
+var obj = {
+    birth: 1990,
+    getAge:  () =&gt; { 
+        var b = this.birth;// 1990
+        var fn = () =&gt; {
+            return new Date().getFullYear() - this.birth; // 1950
+        };
+        return fn();
+    }
+};
+</code></pre><p>那麼這個this已經沒有function包住它<br>又形成了封閉的局面<br>它再次去全局找是否有存在的birth被定義變數</p>
+<p>最後來看一個簡單的小範例</p>
+<pre><code>function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+    this.name = function() {return this.firstName + &quot; &quot; + this.lastName;};
+}
+var myFather = new Person(&quot;John&quot;, &quot;Doe&quot;, 50, &quot;blue&quot;);
+</code></pre><p>這是一個建構函式為基礎產生一個新的物件myFather<br>那麼裏頭的this<br>會指向誰呢?<br>也就是說  當我們想要顯示myFather.firstName時會顯示什麼呢?<br>John。<br>一直到eyeColor都沒有問題<br>如果我想知道Person.name<br>那this指向的就是調用這個name屬性的Person<br>this.name的顯示結果應該就沒問題了<br>好了，簡單的this基礎介紹</p>
+<blockquote>
+<p>最後做個總結<br>如果能了解this,對程式的撰寫上幫助不小</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/正則表達式練習/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1461,7 +1689,7 @@ for(x of f2)               //遞迴列印
                 
                   <a href="/profile/archives">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
