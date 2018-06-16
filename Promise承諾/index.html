@@ -106,20 +106,27 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="記錄日誌">
-<meta property="og:url" content="https://chi-hsin.github.io/profile/archives/2018/05/index.html">
+  <meta name="description" content="異步的要求執行可以讓部分的頁面刷新不需要讓整個葉面刷新再跑一遍所以開始會有大量需要異步請求的需求而有些異步請求Ajax執行完也會回調其他異步請求達成層層嵌套但是  如果像下面這樣可能就要考慮  是否有其他更好的表達方式 先創建一個需要被執行的異步請求函數 function test(resolve,reject) {     console.log(&amp;quot;123&amp;quot;)     res">
+<meta name="keywords" content="筆記">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promise承諾">
+<meta property="og:url" content="https://chi-hsin.github.io/profile/Promise承諾/index.html">
 <meta property="og:site_name" content="記錄日誌">
+<meta property="og:description" content="異步的要求執行可以讓部分的頁面刷新不需要讓整個葉面刷新再跑一遍所以開始會有大量需要異步請求的需求而有些異步請求Ajax執行完也會回調其他異步請求達成層層嵌套但是  如果像下面這樣可能就要考慮  是否有其他更好的表達方式 先創建一個需要被執行的異步請求函數 function test(resolve,reject) {     console.log(&amp;quot;123&amp;quot;)     res">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/Promise承諾/1.jpg">
+<meta property="og:updated_time" content="2018-06-15T03:25:52.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="記錄日誌">
+<meta name="twitter:title" content="Promise承諾">
+<meta name="twitter:description" content="異步的要求執行可以讓部分的頁面刷新不需要讓整個葉面刷新再跑一遍所以開始會有大量需要異步請求的需求而有些異步請求Ajax執行完也會回調其他異步請求達成層層嵌套但是  如果像下面這樣可能就要考慮  是否有其他更好的表達方式 先創建一個需要被執行的異步請求函數 function test(resolve,reject) {     console.log(&amp;quot;123&amp;quot;)     res">
+<meta name="twitter:image" content="https://chi-hsin.github.io/profile/Promise承諾/1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://chi-hsin.github.io/profile/archives/2018/05/"/>
+  <link rel="canonical" href="https://chi-hsin.github.io/profile/Promise承諾/"/>
 
 
 
@@ -129,7 +136,7 @@
   };
 </script>
 
-  <title>歸檔 | 記錄日誌</title>
+  <title>Promise承諾 | 記錄日誌</title>
   
 
 
@@ -176,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,7 +254,7 @@
         
         
           
-          <li class="menu-item menu-item-編輯歷史 menu-item-active">
+          <li class="menu-item menu-item-編輯歷史">
     <a href="/profile/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />編輯歷史</a>
   </li>
@@ -311,217 +318,252 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://chi-hsin.github.io/profile/Promise承諾/';
+        this.page.identifier = 'Promise承諾/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//abc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
-      
-      <span class="archive-page-counter">
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/Promise承諾/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Promise承諾
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-06-12 10:56:37" itemprop="dateCreated datePublished" datetime="2018-06-12T10:56:37+08:00">2018-06-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2018-06-15 11:25:52" itemprop="dateModified" datetime="2018-06-15T11:25:52+08:00">2018-06-15</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共有 10 篇文章。 繼續努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/Promise承諾/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="Promise承諾/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用_截圖2/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_截圖2</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T16:22:36+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用_截圖/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_截圖</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T16:22:36+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>異步的要求執行<br>可以讓部分的頁面刷新<br>不需要讓整個葉面刷新再跑一遍<br>所以開始會有大量需要異步請求的需求<br>而有些異步請求Ajax執行完也會回調其他異步請求<br>達成層層嵌套<br>但是  如果像下面這樣<br>可能就要考慮  是否有其他更好的表達方式<br><img src="/profile/Promise承諾/1.jpg"></p>
+<p>先創建一個需要被執行的異步請求函數</p>
+<pre><code>function test(resolve,reject)
+{
+    console.log(&quot;123&quot;)
+    resolve(&quot;執行成功&quot;);
+}
+</code></pre><p>建立一個新的Promise對象</p>
+<pre><code>var pr1 = new Promise(test);
+</code></pre><p>接著是想要在test執行成功後<br>可以在執行另一個異步請求</p>
+<pre><code>function test2(msg)
+{
+    return new Promise(function(resolve,reject){
+     console.log(msg);
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用-製作GIF/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_製作GIF</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T07:56:37+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    })
+}
+pr1.then(test2);
+</code></pre><p>Promise對象在執行test成功後<br>將Paddimg狀態(也就是進行中)切換成resolve狀態<br>這個resolve代表Promise的一個方法<br>我在進行test成功後<br>回調函式resolve  resolve裡面的值也會傳到下面要執行的函數test2(藉由參數msg)<br>接著繼續執行test2的內容<br>如果失敗  則回調函式reject</p>
+<p>之後就是Promise的鏈</p>
+<pre><code>new Promise(test)
+    .then(test2)
+    .then(test3)
+    .then(test4)
+</code></pre><p>類似長這樣    </p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/新的主題測試/" itemprop="url">
-              
-                <span itemprop="name">新的主題測試</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T16:22:36+08:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/profile/tags/筆記/" rel="tag"># 筆記</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/profile/原型繼承篇/" rel="next" title="原型繼承篇">
+                <i class="fa fa-chevron-left"></i> 原型繼承篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/profile/瀏覽器速度與Rendering tree/" rel="prev" title="瀏覽器速度與Rendering tree">
+                瀏覽器速度與Rendering tree <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -759,6 +801,10 @@
 
 
   
+  <script type="text/javascript" src="/profile/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/profile/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
@@ -773,6 +819,23 @@
     <script id="dsq-count-scr" src="https://cardmonster.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://chi-hsin.github.io/profile/Promise承諾/';
+        this.page.identifier = 'Promise承諾/';
+        this.page.title = 'Promise承諾';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://cardmonster.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 

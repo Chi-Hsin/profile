@@ -332,6 +332,352 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/瀏覽器速度與Rendering tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/瀏覽器速度與Rendering tree/" itemprop="url">
+                  瀏覽器速度與Rendering tree
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-06-16 10:56:37 / 修改時間：12:16:10" itemprop="dateCreated datePublished" datetime="2018-06-16T10:56:37+08:00">2018-06-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/瀏覽器速度與Rendering tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="瀏覽器速度與Rendering tree/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近在學瀏覽器的渲染過程<br>我們每一次滑動<br>瀏覽器都在做Frame(禎)<br>通常人眼可以辨識的速度是<br>60禎/秒<br>也就是每個Frame要在1/60秒<br>也就是16.66毫秒內完成<br>但通常瀏覽器還有其他工作要做<br>所以必須大約在10ms就要做好這個Frame</p>
+<p>而一個Frame包含了DOM元素和CSS規則形成的渲染樹<br>也就是Rendering tree<br>這個Rendering tree簡單來講就是<br>我們畫面上看到的東西<br>像是h1 div p…等Dom元素<br>其中before after的偽元素儘管不在DOM裏頭<br>也被包含在渲染樹裡<br>而看不到的 像是display:none的樣式的元素就不在裏頭</p>
+<img src="/profile/瀏覽器速度與Rendering%20tree/1.jpg" title="渲染樹概念示意圖">
+<p>而每個Frame在製作的過程(我們每次的滑動裡頭)<br>大約是<br>Javascript執行<br>然後依照CSS的樣式規則建構渲染樹<br>接下來染色之後有了這個佈局(layout)<br>然後Paint(繪製)畫出來<br>接著把這些部分組合起來拼裝(Composite)<br>印在瀏覽器上<br>其中圖片的部分是用dotmap組合而成<br>可以看成是很多個小點   最後像拼圖一樣拚上去</p>
+<img src="/profile/瀏覽器速度與Rendering%20tree/2.jpg" title="染色片示意圖">
+<p>為什麼要說這個呢?<br>我們大概來看一下IE瀏覽器跟Chrome瀏覽器在瀏覽<br>比較複雜的網頁時  的速度<br>其中你可以看到IE的速度  會卡(英文shutter  掉禎)<br>這樣即使很好的網站  也會極大的影響使用者觀看</p>
+<h2 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h2><img src="/profile/瀏覽器速度與Rendering%20tree/3.gif" title="IE瀏覽器滑動測試">
+<h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><img src="/profile/瀏覽器速度與Rendering%20tree/4.gif" title="Chrome瀏覽器滑動測試">
+<p>而有些CSS的樣式  如width,height<br>就會影響到佈局  進而影響到繪製  就是要瀏覽器重畫這個frame<br>而有些CSS的樣式  如background color<br>這些只會影響到顏色的部分  不會對佈局造成影響<br>但是需要重畫(Paint)<br>基於這樣的概念  可以對瀏覽器速度有個比較基礎的認知</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/Promise承諾/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/Promise承諾/" itemprop="url">
+                  Promise承諾
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-06-12 10:56:37" itemprop="dateCreated datePublished" datetime="2018-06-12T10:56:37+08:00">2018-06-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2018-06-15 11:25:52" itemprop="dateModified" datetime="2018-06-15T11:25:52+08:00">2018-06-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/Promise承諾/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="Promise承諾/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>異步的要求執行<br>可以讓部分的頁面刷新<br>不需要讓整個葉面刷新再跑一遍<br>所以開始會有大量需要異步請求的需求<br>而有些異步請求Ajax執行完也會回調其他異步請求<br>達成層層嵌套<br>但是  如果像下面這樣<br>可能就要考慮  是否有其他更好的表達方式<br><img src="/profile/Promise承諾/1.jpg"></p>
+<p>先創建一個需要被執行的異步請求函數</p>
+<pre><code>function test(resolve,reject)
+{
+    console.log(&quot;123&quot;)
+    resolve(&quot;執行成功&quot;);
+}
+</code></pre><p>建立一個新的Promise對象</p>
+<pre><code>var pr1 = new Promise(test);
+</code></pre><p>接著是想要在test執行成功後<br>可以在執行另一個異步請求</p>
+<pre><code>function test2(msg)
+{
+    return new Promise(function(resolve,reject){
+     console.log(msg);
+
+    })
+}
+pr1.then(test2);
+</code></pre><p>Promise對象在執行test成功後<br>將Paddimg狀態(也就是進行中)切換成resolve狀態<br>這個resolve代表Promise的一個方法<br>我在進行test成功後<br>回調函式resolve  resolve裡面的值也會傳到下面要執行的函數test2(藉由參數msg)<br>接著繼續執行test2的內容<br>如果失敗  則回調函式reject</p>
+<p>之後就是Promise的鏈</p>
+<pre><code>new Promise(test)
+    .then(test2)
+    .then(test3)
+    .then(test4)
+</code></pre><p>類似長這樣    </p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/原型繼承篇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1922,7 +2268,7 @@ for(x of f2)               //遞迴列印
                 
                   <a href="/profile/archives">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

@@ -106,20 +106,30 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="記錄日誌">
-<meta property="og:url" content="https://chi-hsin.github.io/profile/archives/2018/05/index.html">
+  <meta name="description" content="最近在學瀏覽器的渲染過程我們每一次滑動瀏覽器都在做Frame(禎)通常人眼可以辨識的速度是60禎/秒也就是每個Frame要在1/60秒也就是16.66毫秒內完成但通常瀏覽器還有其他工作要做所以必須大約在10ms就要做好這個Frame 而一個Frame包含了DOM元素和CSS規則形成的渲染樹也就是Rendering tree這個Rendering tree簡單來講就是我們畫面上看到的東西像是h1 d">
+<meta name="keywords" content="筆記">
+<meta property="og:type" content="article">
+<meta property="og:title" content="瀏覽器速度與Rendering tree">
+<meta property="og:url" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering tree/index.html">
 <meta property="og:site_name" content="記錄日誌">
+<meta property="og:description" content="最近在學瀏覽器的渲染過程我們每一次滑動瀏覽器都在做Frame(禎)通常人眼可以辨識的速度是60禎/秒也就是每個Frame要在1/60秒也就是16.66毫秒內完成但通常瀏覽器還有其他工作要做所以必須大約在10ms就要做好這個Frame 而一個Frame包含了DOM元素和CSS規則形成的渲染樹也就是Rendering tree這個Rendering tree簡單來講就是我們畫面上看到的東西像是h1 d">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering%20tree/1.jpg">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering%20tree/2.jpg">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering%20tree/3.gif">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering%20tree/4.gif">
+<meta property="og:updated_time" content="2018-06-16T04:16:10.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="記錄日誌">
+<meta name="twitter:title" content="瀏覽器速度與Rendering tree">
+<meta name="twitter:description" content="最近在學瀏覽器的渲染過程我們每一次滑動瀏覽器都在做Frame(禎)通常人眼可以辨識的速度是60禎/秒也就是每個Frame要在1/60秒也就是16.66毫秒內完成但通常瀏覽器還有其他工作要做所以必須大約在10ms就要做好這個Frame 而一個Frame包含了DOM元素和CSS規則形成的渲染樹也就是Rendering tree這個Rendering tree簡單來講就是我們畫面上看到的東西像是h1 d">
+<meta name="twitter:image" content="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering%20tree/1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://chi-hsin.github.io/profile/archives/2018/05/"/>
+  <link rel="canonical" href="https://chi-hsin.github.io/profile/瀏覽器速度與Rendering tree/"/>
 
 
 
@@ -129,7 +139,7 @@
   };
 </script>
 
-  <title>歸檔 | 記錄日誌</title>
+  <title>瀏覽器速度與Rendering tree | 記錄日誌</title>
   
 
 
@@ -176,7 +186,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,7 +257,7 @@
         
         
           
-          <li class="menu-item menu-item-編輯歷史 menu-item-active">
+          <li class="menu-item menu-item-編輯歷史">
     <a href="/profile/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />編輯歷史</a>
   </li>
@@ -311,217 +321,220 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://chi-hsin.github.io/profile/瀏覽器速度與Rendering tree/';
+        this.page.identifier = '瀏覽器速度與Rendering tree/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//abc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
-      
-      <span class="archive-page-counter">
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/瀏覽器速度與Rendering tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">瀏覽器速度與Rendering tree
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-06-16 10:56:37 / 修改時間：12:16:10" itemprop="dateCreated datePublished" datetime="2018-06-16T10:56:37+08:00">2018-06-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共有 10 篇文章。 繼續努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/瀏覽器速度與Rendering tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="瀏覽器速度與Rendering tree/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用_截圖2/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_截圖2</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T16:22:36+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用_截圖/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_截圖</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T16:22:36+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/工具的使用-製作GIF/" itemprop="url">
-              
-                <span itemprop="name">工具的使用_製作GIF</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T07:56:37+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>最近在學瀏覽器的渲染過程<br>我們每一次滑動<br>瀏覽器都在做Frame(禎)<br>通常人眼可以辨識的速度是<br>60禎/秒<br>也就是每個Frame要在1/60秒<br>也就是16.66毫秒內完成<br>但通常瀏覽器還有其他工作要做<br>所以必須大約在10ms就要做好這個Frame</p>
+<p>而一個Frame包含了DOM元素和CSS規則形成的渲染樹<br>也就是Rendering tree<br>這個Rendering tree簡單來講就是<br>我們畫面上看到的東西<br>像是h1 div p…等Dom元素<br>其中before after的偽元素儘管不在DOM裏頭<br>也被包含在渲染樹裡<br>而看不到的 像是display:none的樣式的元素就不在裏頭</p>
+<img src="/profile/瀏覽器速度與Rendering%20tree/1.jpg" title="渲染樹概念示意圖">
+<p>而每個Frame在製作的過程(我們每次的滑動裡頭)<br>大約是<br>Javascript執行<br>然後依照CSS的樣式規則建構渲染樹<br>接下來染色之後有了這個佈局(layout)<br>然後Paint(繪製)畫出來<br>接著把這些部分組合起來拼裝(Composite)<br>印在瀏覽器上<br>其中圖片的部分是用dotmap組合而成<br>可以看成是很多個小點   最後像拼圖一樣拚上去</p>
+<img src="/profile/瀏覽器速度與Rendering%20tree/2.jpg" title="染色片示意圖">
+<p>為什麼要說這個呢?<br>我們大概來看一下IE瀏覽器跟Chrome瀏覽器在瀏覽<br>比較複雜的網頁時  的速度<br>其中你可以看到IE的速度  會卡(英文shutter  掉禎)<br>這樣即使很好的網站  也會極大的影響使用者觀看</p>
+<h2 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h2><img src="/profile/瀏覽器速度與Rendering%20tree/3.gif" title="IE瀏覽器滑動測試">
+<h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><img src="/profile/瀏覽器速度與Rendering%20tree/4.gif" title="Chrome瀏覽器滑動測試">
+<p>而有些CSS的樣式  如width,height<br>就會影響到佈局  進而影響到繪製  就是要瀏覽器重畫這個frame<br>而有些CSS的樣式  如background color<br>這些只會影響到顏色的部分  不會對佈局造成影響<br>但是需要重畫(Paint)<br>基於這樣的概念  可以對瀏覽器速度有個比較基礎的認知</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/profile/新的主題測試/" itemprop="url">
-              
-                <span itemprop="name">新的主題測試</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T16:22:36+08:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/profile/tags/筆記/" rel="tag"># 筆記</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/profile/Promise承諾/" rel="next" title="Promise承諾">
+                <i class="fa fa-chevron-left"></i> Promise承諾
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -542,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -618,6 +640,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IE"><span class="nav-number">1.</span> <span class="nav-text">IE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome"><span class="nav-number">2.</span> <span class="nav-text">Chrome</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -759,6 +797,10 @@
 
 
   
+  <script type="text/javascript" src="/profile/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/profile/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
@@ -773,6 +815,23 @@
     <script id="dsq-count-scr" src="https://cardmonster.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://chi-hsin.github.io/profile/瀏覽器速度與Rendering tree/';
+        this.page.identifier = '瀏覽器速度與Rendering tree/';
+        this.page.title = '瀏覽器速度與Rendering tree';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://cardmonster.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 

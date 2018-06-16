@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[瀏覽器速度與Rendering tree]]></title>
+    <url>%2Fprofile%2F%E7%80%8F%E8%A6%BD%E5%99%A8%E9%80%9F%E5%BA%A6%E8%88%87Rendering%20tree%2F</url>
+    <content type="text"><![CDATA[--- title: 瀏覽器速度與Rendering tree date: 2018-06-16 10:56:37 tags: - 筆記 --- 最近在學瀏覽器的渲染過程 我們每一次滑動 瀏覽器都在做Frame(禎) 通常人眼可以辨識的速度是 60禎/秒 也就是每個Frame要在1/60秒 也就是16.66毫秒內完成 但通常瀏覽器還有其他工作要做 所以必須大約在10ms就要做好這個Frame 而一個Frame包含了DOM元素和CSS規則形成的渲染樹 也就是Rendering tree 這個Rendering tree簡單來講就是 我們畫面上看到的東西 像是h1 div p...等Dom元素 其中before after的偽元素儘管不在DOM裏頭 也被包含在渲染樹裡 而看不到的 像是display:none的樣式的元素就不在裏頭 {% asset_img 1.jpg 渲染樹概念示意圖 %} 而每個Frame在製作的過程(我們每次的滑動裡頭) 大約是 Javascript執行 然後依照CSS的樣式規則建構渲染樹 接下來染色之後有了這個佈局(layout) 然後Paint(繪製)畫出來 接著把這些部分組合起來拼裝(Composite) 印在瀏覽器上 其中圖片的部分是用dotmap組合而成 可以看成是很多個小點 最後像拼圖一樣拚上去 {% asset_img 2.jpg 染色片示意圖 %} 為什麼要說這個呢? 我們大概來看一下IE瀏覽器跟Chrome瀏覽器在瀏覽 比較複雜的網頁時 的速度 其中你可以看到IE的速度 會卡(英文shutter 掉禎) 這樣即使很好的網站 也會極大的影響使用者觀看 IE --- {% asset_img 3.gif IE瀏覽器滑動測試 %} Chrome --- {% asset_img 4.gif Chrome瀏覽器滑動測試 %} 而有些CSS的樣式 如width,height 就會影響到佈局 進而影響到繪製 就是要瀏覽器重畫這個frame 而有些CSS的樣式 如background color 這些只會影響到顏色的部分 不會對佈局造成影響 但是需要重畫(Paint) 基於這樣的概念 可以對瀏覽器速度有個比較基礎的認知]]></content>
+      <tags>
+        <tag>筆記</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Promise承諾]]></title>
+    <url>%2Fprofile%2FPromise%E6%89%BF%E8%AB%BE%2F</url>
+    <content type="text"><![CDATA[--- title: Promise承諾 date: 2018-06-12 10:56:37 tags: - 筆記 --- 異步的要求執行 可以讓部分的頁面刷新 不需要讓整個葉面刷新再跑一遍 所以開始會有大量需要異步請求的需求 而有些異步請求Ajax執行完也會回調其他異步請求 達成層層嵌套 但是 如果像下面這樣 可能就要考慮 是否有其他更好的表達方式 {% asset_img 1.jpg %} 先創建一個需要被執行的異步請求函數 function test(resolve,reject) { console.log("123") resolve("執行成功"); } 建立一個新的Promise對象 var pr1 = new Promise(test); 接著是想要在test執行成功後 可以在執行另一個異步請求 function test2(msg) { return new Promise(function(resolve,reject){ console.log(msg); }) } pr1.then(test2); Promise對象在執行test成功後 將Paddimg狀態(也就是進行中)切換成resolve狀態 這個resolve代表Promise的一個方法 我在進行test成功後 回調函式resolve resolve裡面的值也會傳到下面要執行的函數test2(藉由參數msg) 接著繼續執行test2的內容 如果失敗 則回調函式reject 之後就是Promise的鏈 new Promise(test) .then(test2) .then(test3) .then(test4) 類似長這樣]]></content>
+      <tags>
+        <tag>筆記</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[原型繼承篇]]></title>
     <url>%2Fprofile%2F%E5%8E%9F%E5%9E%8B%E7%B9%BC%E6%89%BF%E7%AF%87%2F</url>
     <content type="text"><![CDATA[--- title: 原型繼承篇 date: 2018-06-05 10:56:37 tags: - 筆記 --- 有一台車子 我們車子有什麼顏色的呢 黑色、白色、藍色、紅色....等 廠商做車子 不同顏色的差在烤漆 其他功能一樣 ~~有哪台同車款的車內部裝潢不一樣的~~ {% asset_img 1.jpg %} {% asset_img 2.jpg %} 當我們定義一個Function 當我們定義一個陣列 當我定義一個字串 Function它就繼承了祖先(原型)的方法 陣列也是 陣列有array各種方法 可以直接運用 Function->Function prototype->Object prototype arr->arr prototype->Array prototype 這樣一個一個串連找源頭 我們稱之為原型鏈(prototype chain) *** 舉例來講 這是一個貓咪的建構函式 function Cat(name) { this.name = name; this.say = function() { return `Hello, ${this.name}!`; } } var cat1 = new Cat("普通的貓"); 當我們使用建構函式時 創造一個貓咪的物件 它就是參考Cat.prototype的原型去作出一個物件 所有屬性也都被存在Cat.prototype裏頭 也就是 Cat----->Cat.prototype->Object proototype 當我們要調用說話方法時 console.log(cat1.say()); 貓咪正常說話 但是時常做的是 會把say()方法寫給原型 讓每次物件產生的時候 都參照這個原型 就會少產生需要的Function 像是底下這樣 function Cat(name) { this.name = name; } Cat.prototype.say = function() { return `Hello, ${this.name}!`; } var cat1 = new Cat("普通的貓"); 還記得前面講過的this嗎 這個this指向新產生的這個物件(普通的貓) 當我們想要賦予其它屬性時 就必須寫在Cat建構函式裡 如果像這樣 這是一隻不會飛的貓 function Cat(name) { this.name = name; } Cat.prototype.say = function() { return `Hello, ${this.name}!`; } Cat.skill = function(){ return "不會飛";}; var cat1 = new Cat("普通的貓"); console.log(cat1.skill()); // skill is not a function 當我們要用cat1.skill() 將會出現錯誤訊息 {% asset_img 3.jpg %} > 因為Cat本身只是用來產生物件用 > 所有的屬性參照 都是看原型 > 換句煥說 prototype屬性是看這個Cat函式包起來的東西 我們再新增一行 function Cat(name) { this.name = name; } Cat.prototype.say = function() { return `Hello, ${this.name}!`; } Cat.prototype.skill = function(){ return "不會飛";}; Cat.skill = function(){ return "可能不會飛";}; var cat1 = new Cat("普通的貓"); console.log(cat1.skill()); //不會飛 印證參照的是原型 直接寫給Cat是無效的 或者就直接寫在Cat建構函式裡頭 接下來讓我們創造一隻會飛的貓 {% asset_img 4.jpg %} 一樣是用建構函數開頭 function Cat(name) { this.name = name; } Cat.prototype.say = function() { return `Hello, ${this.name}!`; } Cat.prototype.skill = function(){ return "不會飛";}; var cat1 = new Cat("普通的貓"); function Happi() { Cat.call(this,"哈比");//我們調用Cat函式的方法給Happi } var cat2 = new Happi; console.log(cat2.skill());// is not a function 現在 Happi->Happi prototype->Cat->Cat prototype->Object prototype 也因為Happi沒寫skill方法而無法辨識 加上這一段 Happi.prototype.skill = function(){return "我會飛"}; 做出了一隻會飛的貓咪 大概的示意圖 {% asset_img 5.jpg %}]]></content>
