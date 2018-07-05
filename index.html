@@ -332,6 +332,384 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/隨機產生圖片/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/隨機產生圖片/" itemprop="url">
+                  隨機產生圖片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-07-06 07:56:37" itemprop="dateCreated datePublished" datetime="2018-07-06T07:56:37+08:00">2018-07-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2018-07-05 08:22:04" itemprop="dateModified" datetime="2018-07-05T08:22:04+08:00">2018-07-05</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/隨機產生圖片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="隨機產生圖片/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>使用後端語言:PHP<br>使用前端語言:javascript<br>環境:能解析PHP(看懂)的作業系統<br>主題:產生隨機圖片的小作品(迷你版)</p>
+<img src="/profile/隨機產生圖片/1.jpg">
+<p>大致上的做法是HTML跑完後<br>加載PHP後端的script<br>接著依據這些資料呈現圖片</p>
+<hr>
+<p>其中一個是我們跑的index.php<br>另外一個網頁是就純PHP echo出資料而已<br>對   就這樣<br><img src="/profile/隨機產生圖片/2.jpg"><br>用JSONP的方式  將PHP用script的方式加載進來<br>雖然說是JSONP這種陌生的名詞<br>但它並非新技術   而是一種運用而已</p>
+<p>特別要注意的是<br><img src="/profile/隨機產生圖片/3.jpg"><br>這裡綁定的方法  第二個參數是放函數名稱<br>也就是只要寫上click_sth就好囉~</p>
+<p>接下來我們直接跳到<del>程式碼比較短</del>的PHP檔案<br><img src="/profile/隨機產生圖片/4.jpg"><br>我們直接用glob去找該檔案底下的所有資料<br>因為我們要的只是圖片  所以用了正則表達式判斷<br><img src="/profile/隨機產生圖片/5.jpg"><br>如果正確再加進來我們要的資料<br>注意如果有/根目錄路徑要再加上\反斜線<br>png和jpg像這樣的邏輯判斷  中間也不能有空白  會判斷錯誤哦<br>$則是以前面這個JPG或PNG結尾</p>
+<img src="/profile/隨機產生圖片/6.jpg">
+<p>第二種情況是如果我們目錄底下又有子目錄(因為它不符合剛剛的正則式判斷)<br>就在運用剛剛相同的方法<br>再去把檔案加進來</p>
+<img src="/profile/隨機產生圖片/7.jpg">
+<p>最後把這個東西echo 起來就好了<br>因為它是PHP的物件  所以必須用JSON轉換讓其他語言能看懂這是什麼<br>至於myJSON()就是我們寫在script裏頭的函式<br>myJSON()是在做什麼呢?<br>我們回到原先第一個網頁index.pgp</p>
+<hr>
+<img src="/profile/隨機產生圖片/8.jpg">
+<p>我們利用Math函式庫裏頭的random()再加上一些數值的運算產生隨機數<br>接著產生一個新的img元素  放在我們id為test_img的區塊裡頭<br>接下來我們也在圖片上綁定可以點擊更換圖片的方法<br><img src="/profile/隨機產生圖片/9.jpg"><br>在append之後會返回JQUERY的對象<br>也就是說  我們在append之後可以再用find去找他底下的子元素<br>形成這樣的一個很好看的鏈</p>
+<p>由於PHP echo myJSON<br>相當於在script執行了這個函式<br>把array參數帶進來<br>那我們這時候就要想辦法保存這個資料<br>如果以後需要再用到  可以直接提取<br>就不用每次都跟資料庫或者需要另外做其他事獲取資料<br>這樣將有助於提升執行的效率<br>我們可以用localStorage儲存起來<br>再存取之前  要先把它字串轉換也就是JSON.stringify()</p>
+<p>接下來就是最後一個函式click_sth()用來換圖片用的<br>我們把localStorage存的東西提取出來之後<br>用JSON.parse解析出原本那個物件<br>用同樣的方法換照片<br><img src="/profile/隨機產生圖片/10.jpg"></p>
+<p>接著固定時間換照片就可以了setInterval<br>一樣也是調用click_sth<br>也就是click_sth這個函式被重複利用了三次<br><a href="http://jack.lionfree.net/game/random_pic/" title="Title" target="_blank" rel="noopener">以下為連結網頁</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/陣列中的元素總和測試/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/陣列中的元素總和測試/" itemprop="url">
+                  陣列中的元素總和測試
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-07-05 07:56:37 / 修改時間：02:50:27" itemprop="dateCreated datePublished" datetime="2018-07-05T07:56:37+08:00">2018-07-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/陣列中的元素總和測試/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="陣列中的元素總和測試/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用前端語言-javascript"><a href="#使用前端語言-javascript" class="headerlink" title="使用前端語言:javascript"></a>使用前端語言:javascript</h1><img src="/profile/陣列中的元素總和測試/0.jpg">
+<p>做完一臉茫然…也不曉得這樣好不好<br>不過做就對了<br>算是簡易的試做<br>程式碼如下</p>
+<pre><code>&lt;script&gt;$(function(){
+    var arr = [1,2,3,3,2,1];
+    $(&quot;#test&quot;).html(&quot;陣列為&quot;+arr+&quot;區間總合為六的有:&quot;);
+    for(var i=0;i&lt;6;i++)
+    {
+         sum = arr[i];
+         arr_res = [sum];
+         for(j=i+1;j&lt;6;j++)
+         {
+                sum += arr[j];
+                arr_res.push(arr[j]);
+               if(sum &gt; 6)
+               {
+                    break;
+               }
+               if(sum == 6)
+               {
+                document.getElementById(&quot;test&quot;).innerHTML += &quot;&lt;p&gt;&quot;+arr_res;
+                break;
+               }
+         }
+
+
+    }
+})&lt;/script&gt;    
+</code></pre><p>其中有引進JQUERY  也可不用</p>
+<h1 id="這邊講一下break與continue的差異"><a href="#這邊講一下break與continue的差異" class="headerlink" title="這邊講一下break與continue的差異"></a>這邊講一下break與continue的差異</h1><blockquote>
+<blockquote>
+<p>break是跳出整個迴圈</p>
+</blockquote>
+</blockquote>
+<pre><code>for(var i=0;i&lt;10;i++)
+{
+    if(i==5){break;}//下面的事情不做了跳出整個迴圈
+    //do sth.....
+}
+</code></pre><blockquote>
+<blockquote>
+<p>continue則是跳出這個階段  直接進行下一個迴圈</p>
+</blockquote>
+</blockquote>
+<pre><code>for(var i=0;i&lt;10;i++)
+{
+    if(i==5){continue;}//下面的事情不做了   繼續往下跑i==6
+    //do sth......
+}
+</code></pre><p><a href="http://jack.lionfree.net/game/sum_test/" title="Title" target="_blank" rel="noopener">以下為連結網頁</a><br><img src="/profile/陣列中的元素總和測試/1.jpg"><br>可以看出來是很陽春的試做<br>主要原因是<br>如果陣列其中含有負數或0<br>這樣的判斷方法就不適用了</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/瀏覽器速度與Rendering tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1540,165 +1918,6 @@ for(x of f2)               //遞迴列印
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/工具的使用_截圖2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="信">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="記錄日誌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/profile/工具的使用_截圖2/" itemprop="url">
-                  工具的使用_截圖2
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2018-05-26 16:22:36 / 修改時間：07:36:42" itemprop="dateCreated datePublished" datetime="2018-05-26T16:22:36+08:00">2018-05-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/profile/工具的使用_截圖2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="工具的使用_截圖2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <img src="/profile/工具的使用_截圖2/0.jpg">
-<p>繼上一章的工具的使用後<br>今天要介紹的是其他軟體的截圖工具<br>例如我們日常使用的通訊軟體   都有這個功能<br><img src="/profile/工具的使用_截圖2/1.jpg"></p>
-<hr>
-<h1 id="LINE"><a href="#LINE" class="headerlink" title="LINE"></a>LINE</h1><p>這是LINE不久前推出的功能<br>按下即可截圖<br><img src="/profile/工具的使用_截圖2/2.gif"></p>
-<hr>
-<h1 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h1><p>也有這個功能<br>快捷鍵是Ctrl+Alt+A<br><img src="/profile/工具的使用_截圖2/3.gif"></p>
-<hr>
-<p>最後介紹一個頗有知名度的剪輯軟體的公司</p>
-<h1 id="ApowerSoft"><a href="#ApowerSoft" class="headerlink" title="ApowerSoft"></a>ApowerSoft</h1><p>這在Google搜尋都能夠找到<br>它做的這款截圖軟體  只要按下快捷鍵也能立即截圖<br>更能直接做簡易的編輯<br><img src="/profile/工具的使用_截圖2/4.jpg"><br>它的功能也更多  能夠用的工具也比較容易操作<br>這是目前筆者正在使用的截圖工具<br>有一段免費試用期<br><img src="/profile/工具的使用_截圖2/5.gif"><br>要注意的是  如果有同時用QQ通訊軟體<br>他們快捷鍵會衝突  需另外設置</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      		
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/工具的使用_截圖/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1855,7 +2074,7 @@ for(x of f2)               //遞迴列印
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/工具的使用-製作GIF/">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/工具的使用_截圖2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="信">
@@ -1874,8 +2093,8 @@ for(x of f2)               //遞迴列印
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/profile/工具的使用-製作GIF/" itemprop="url">
-                  工具的使用_製作GIF
+                <a class="post-title-link" href="/profile/工具的使用_截圖2/" itemprop="url">
+                  工具的使用_截圖2
                 </a>
               
             
@@ -1901,7 +2120,7 @@ for(x of f2)               //遞迴列印
                 
               
 
-              <time title="創建時間：2018-05-26 07:56:37 / 修改時間：07:59:03" itemprop="dateCreated datePublished" datetime="2018-05-26T07:56:37+08:00">2018-05-26</time>
+              <time title="創建時間：2018-05-26 16:22:36 / 修改時間：07:36:42" itemprop="dateCreated datePublished" datetime="2018-05-26T16:22:36+08:00">2018-05-26</time>
             
 
             
@@ -1920,9 +2139,9 @@ for(x of f2)               //遞迴列印
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/profile/工具的使用-製作GIF/#comments" itemprop="discussionUrl">
+                <a href="/profile/工具的使用_截圖2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="工具的使用-製作GIF/" itemprop="commentCount"></span>
+                        data-disqus-identifier="工具的使用_截圖2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1952,237 +2171,15 @@ for(x of f2)               //遞迴列印
       
         
           
-            <img src="/profile/工具的使用-製作GIF/0.gif">
-<p>現在來介紹<br>有時候我們簡短的滑鼠的一個MOVE動作<br>不想拍影片那麼費工<br>想要拍成GIF動圖  該怎麼做呢?</p>
+            <img src="/profile/工具的使用_截圖2/0.jpg">
+<p>繼上一章的工具的使用後<br>今天要介紹的是其他軟體的截圖工具<br>例如我們日常使用的通訊軟體   都有這個功能<br><img src="/profile/工具的使用_截圖2/1.jpg"></p>
 <hr>
-<img src="/profile/工具的使用-製作GIF/1.jpg" title="GIF_Cam畫面">
-<p>使用方法為<br><img src="/profile/工具的使用-製作GIF/2.jpg" title="GIF_Cam步驟"><br>框選的範圍不宜過大，會讓檔案大小也會變大<br>最後要注意的是   如果要拍下一張GIF時<br>要記得按New清除上一張的紀錄<br>PS.第一章圖就是沒有清空的下場</p>
+<h1 id="LINE"><a href="#LINE" class="headerlink" title="LINE"></a>LINE</h1><p>這是LINE不久前推出的功能<br>按下即可截圖<br><img src="/profile/工具的使用_截圖2/2.gif"></p>
 <hr>
-<blockquote>
-<p>官方載點：<a href="https://gifcam.en.softonic.com/" target="_blank" rel="noopener">https://gifcam.en.softonic.com/</a><br>備用載點: <a href="https://drive.google.com/open?id=1Gzj2N2FjB88acR7uK6WtA8kWQK6ZQBvv" target="_blank" rel="noopener">https://drive.google.com/open?id=1Gzj2N2FjB88acR7uK6WtA8kWQK6ZQBvv</a></p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      		
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/新的主題測試/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="信">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="記錄日誌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/profile/新的主題測試/" itemprop="url">
-                  新的主題測試
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2018-05-05 16:22:36" itemprop="dateCreated datePublished" datetime="2018-05-05T16:22:36+08:00">2018-05-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2018-05-26 08:08:37" itemprop="dateModified" datetime="2018-05-26T08:08:37+08:00">2018-05-26</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/profile/新的主題測試/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="新的主題測試/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><del>貸款抓住促進數量伊拉克描述物品計算五年反覆娛樂房產下門口你，樣子人們採購動畫新聞網也，孤獨權限有一些當時開始促進輸出相當分享好友允許，。</del><br><img src="/cardmonster/img/38401_1559808918821_2753383_n.jpg" alt="aaa"><br><img src="/cardmonster/img/39359_124691630910608_812022_n.jpg" alt="aaa"><br><img src="https://i.imgur.com/Xzqi180.gif" alt="bbb"></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Item</th>
-<th style="text-align:center">Value</th>
-<th style="text-align:center">Qty</th>
-<th style="text-align:center">QQQy</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Computer</td>
-<td style="text-align:center">$1600</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td style="text-align:center">Phone</td>
-<td style="text-align:center">$12</td>
-<td style="text-align:center">12</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td style="text-align:center">Pipe</td>
-<td style="text-align:center">$1</td>
-<td style="text-align:center">234</td>
-<td style="text-align:center">5</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>This is the first level of quoting.</p>
-<blockquote>
-<p>This is nested blockquote.</p>
-</blockquote>
-<blockquote>
-<p>Back to the first level.</p>
-</blockquote>
-</blockquote>
-<ol>
-<li><p>This is a list item with two paragraphs. Lorem ipsum dolor<br>sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>mi posuere lectus.</p>
-<p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>sit amet velit.</p>
-</li>
-<li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p>
-</li>
-</ol>
-<ul>
-<li><p>A list item with a code block:</p>
-<pre><code>&lt;code goes here&gt;
-</code></pre></li>
-</ul>
+<h1 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h1><p>也有這個功能<br>快捷鍵是Ctrl+Alt+A<br><img src="/profile/工具的使用_截圖2/3.gif"></p>
 <hr>
-<pre><code>我是程式碼
-</code></pre><p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a> inline link.</p>
-<p><a href="http://example.net/" target="_blank" rel="noopener">This link</a> has no title attribute.    </p>
-<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from<br><a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.</p>
-<p>Use the <code>printf()</code> function.<br>A single backtick in a code span: <code>`</code></p>
-<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
-<p>-aaa</p>
+<p>最後介紹一個頗有知名度的剪輯軟體的公司</p>
+<h1 id="ApowerSoft"><a href="#ApowerSoft" class="headerlink" title="ApowerSoft"></a>ApowerSoft</h1><p>這在Google搜尋都能夠找到<br>它做的這款截圖軟體  只要按下快捷鍵也能立即截圖<br>更能直接做簡易的編輯<br><img src="/profile/工具的使用_截圖2/4.jpg"><br>它的功能也更多  能夠用的工具也比較容易操作<br>這是目前筆者正在使用的截圖工具<br>有一段免費試用期<br><img src="/profile/工具的使用_截圖2/5.gif"><br>要注意的是  如果有同時用QQ通訊軟體<br>他們快捷鍵會衝突  需另外設置</p>
 
           
         
@@ -2224,6 +2221,10 @@ for(x of f2)               //遞迴列印
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/profile/page/2/">2</a><a class="extend next" rel="next" href="/profile/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2268,7 +2269,7 @@ for(x of f2)               //遞迴列印
                 
                   <a href="/profile/archives">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -2289,7 +2290,11 @@ for(x of f2)               //遞迴列印
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">標籤</span>
                   </a>
                 </div>

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[隨機產生圖片]]></title>
+    <url>%2Fprofile%2F%E9%9A%A8%E6%A9%9F%E7%94%A2%E7%94%9F%E5%9C%96%E7%89%87%2F</url>
+    <content type="text"><![CDATA[--- title: 隨機產生圖片 date: 2018-07-06 07:56:37 tags: - 筆記 - javascript - php --- 使用後端語言:PHP 使用前端語言:javascript 環境:能解析PHP(看懂)的作業系統 主題:產生隨機圖片的小作品(迷你版) {% asset_img 1.jpg %} 大致上的做法是HTML跑完後 加載PHP後端的script 接著依據這些資料呈現圖片 *** 其中一個是我們跑的index.php 另外一個網頁是就純PHP echo出資料而已 對 就這樣 {% asset_img 2.jpg %} 用JSONP的方式 將PHP用script的方式加載進來 雖然說是JSONP這種陌生的名詞 但它並非新技術 而是一種運用而已 特別要注意的是 {% asset_img 3.jpg %} 這裡綁定的方法 第二個參數是放函數名稱 也就是只要寫上click_sth就好囉~ 接下來我們直接跳到~~程式碼比較短~~的PHP檔案 {% asset_img 4.jpg %} 我們直接用glob去找該檔案底下的所有資料 因為我們要的只是圖片 所以用了正則表達式判斷 {% asset_img 5.jpg %} 如果正確再加進來我們要的資料 注意如果有/根目錄路徑要再加上\反斜線 png和jpg像這樣的邏輯判斷 中間也不能有空白 會判斷錯誤哦 $則是以前面這個JPG或PNG結尾 {% asset_img 6.jpg %} 第二種情況是如果我們目錄底下又有子目錄(因為它不符合剛剛的正則式判斷) 就在運用剛剛相同的方法 再去把檔案加進來 {% asset_img 7.jpg %} 最後把這個東西echo 起來就好了 因為它是PHP的物件 所以必須用JSON轉換讓其他語言能看懂這是什麼 至於myJSON()就是我們寫在script裏頭的函式 myJSON()是在做什麼呢? 我們回到原先第一個網頁index.pgp *** {% asset_img 8.jpg %} 我們利用Math函式庫裏頭的random()再加上一些數值的運算產生隨機數 接著產生一個新的img元素 放在我們id為test_img的區塊裡頭 接下來我們也在圖片上綁定可以點擊更換圖片的方法 {% asset_img 9.jpg %} 在append之後會返回JQUERY的對象 也就是說 我們在append之後可以再用find去找他底下的子元素 形成這樣的一個很好看的鏈 由於PHP echo myJSON 相當於在script執行了這個函式 把array參數帶進來 那我們這時候就要想辦法保存這個資料 如果以後需要再用到 可以直接提取 就不用每次都跟資料庫或者需要另外做其他事獲取資料 這樣將有助於提升執行的效率 我們可以用localStorage儲存起來 再存取之前 要先把它字串轉換也就是JSON.stringify() 接下來就是最後一個函式click_sth()用來換圖片用的 我們把localStorage存的東西提取出來之後 用JSON.parse解析出原本那個物件 用同樣的方法換照片 {% asset_img 10.jpg %} 接著固定時間換照片就可以了setInterval 一樣也是調用click_sth 也就是click_sth這個函式被重複利用了三次 [以下為連結網頁](http://jack.lionfree.net/game/random_pic/ "Title")]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[陣列中的元素總和測試]]></title>
+    <url>%2Fprofile%2F%E9%99%A3%E5%88%97%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E7%B8%BD%E5%92%8C%E6%B8%AC%E8%A9%A6%2F</url>
+    <content type="text"><![CDATA[--- title: 陣列中的元素總和測試 date: 2018-07-05 07:56:37 tags: - 筆記 - javascript --- 使用前端語言:javascript === {% asset_img 0.jpg %} 做完一臉茫然...也不曉得這樣好不好 不過做就對了 算是簡易的試做 程式碼如下 $(function(){ var arr = [1,2,3,3,2,1]; $("#test").html("陣列為"+arr+"區間總合為六的有:"); for(var i=0;i> break是跳出整個迴圈 for(var i=0;i> continue則是跳出這個階段 直接進行下一個迴圈 for(var i=0;i]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[瀏覽器速度與Rendering tree]]></title>
     <url>%2Fprofile%2F%E7%80%8F%E8%A6%BD%E5%99%A8%E9%80%9F%E5%BA%A6%E8%88%87Rendering%20tree%2F</url>
     <content type="text"><![CDATA[--- title: 瀏覽器速度與Rendering tree date: 2018-06-16 10:56:37 tags: - 筆記 --- 最近在學瀏覽器的渲染過程 我們每一次滑動 瀏覽器都在做Frame(禎) 通常人眼可以辨識的速度是 60禎/秒 也就是每個Frame要在1/60秒 也就是16.66毫秒內完成 但通常瀏覽器還有其他工作要做 所以必須大約在10ms就要做好這個Frame 而一個Frame包含了DOM元素和CSS規則形成的渲染樹 也就是Rendering tree 這個Rendering tree簡單來講就是 我們畫面上看到的東西 像是h1 div p...等Dom元素 其中before after的偽元素儘管不在DOM裏頭 也被包含在渲染樹裡 而看不到的 像是display:none的樣式的元素就不在裏頭 {% asset_img 1.jpg 渲染樹概念示意圖 %} 而每個Frame在製作的過程(我們每次的滑動裡頭) 大約是 Javascript執行 然後依照CSS的樣式規則建構渲染樹 接下來染色之後有了這個佈局(layout) 然後Paint(繪製)畫出來 接著把這些部分組合起來拼裝(Composite) 印在瀏覽器上 其中圖片的部分是用dotmap組合而成 可以看成是很多個小點 最後像拼圖一樣拚上去 {% asset_img 2.jpg 染色片示意圖 %} 為什麼要說這個呢? 我們大概來看一下IE瀏覽器跟Chrome瀏覽器在瀏覽 比較複雜的網頁時 的速度 其中你可以看到IE的速度 會卡(英文shutter 掉禎) 這樣即使很好的網站 也會極大的影響使用者觀看 IE --- {% asset_img 3.gif IE瀏覽器滑動測試 %} Chrome --- {% asset_img 4.gif Chrome瀏覽器滑動測試 %} 而有些CSS的樣式 如width,height 就會影響到佈局 進而影響到繪製 就是要瀏覽器重畫這個frame 而有些CSS的樣式 如background color 這些只會影響到顏色的部分 不會對佈局造成影響 但是需要重畫(Paint) 基於這樣的概念 可以對瀏覽器速度有個比較基礎的認知]]></content>
@@ -49,17 +68,17 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[工具的使用_截圖2]]></title>
-    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%962%2F</url>
-    <content type="text"><![CDATA[--- title: 工具的使用_截圖2 date: 2018-05-26 16:22:36 tags: - 工具 --- {% asset_img 0.jpg %} 繼上一章的工具的使用後 今天要介紹的是其他軟體的截圖工具 例如我們日常使用的通訊軟體 都有這個功能 {% asset_img 1.jpg %} *** LINE === 這是LINE不久前推出的功能 按下即可截圖 {% asset_img 2.gif %} *** QQ === 也有這個功能 快捷鍵是Ctrl+Alt+A {% asset_img 3.gif %} *** 最後介紹一個頗有知名度的剪輯軟體的公司 ApowerSoft === 這在Google搜尋都能夠找到 它做的這款截圖軟體 只要按下快捷鍵也能立即截圖 更能直接做簡易的編輯 {% asset_img 4.jpg %} 它的功能也更多 能夠用的工具也比較容易操作 這是目前筆者正在使用的截圖工具 有一段免費試用期 {% asset_img 5.gif %} 要注意的是 如果有同時用QQ通訊軟體 他們快捷鍵會衝突 需另外設置]]></content>
+    <title><![CDATA[工具的使用_截圖]]></title>
+    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%96%2F</url>
+    <content type="text"><![CDATA[--- title: 工具的使用_截圖 date: 2018-05-26 16:22:36 tags: - 工具 --- 本站第一篇文章 {% asset_img 1.png %} 今天要介紹截圖工具的使用 首先是截圖的使用方法 筆電與桌機 (筆電) Fn按著不放+右上角的PrintScreen(可能簡寫Ptrsc) {% asset_img 2.jpg 筆電鍵盤按法 %} (桌機) 桌機一般來說只要按住PrintScreen就行了 {% asset_img 3.jpg 桌機鍵盤按法 %} 那麼接下來做什麼呢? 到小畫家貼上就好 如果找不到小畫家呢? {% asset_img 4.jpg 小畫家位置 %} 剪貼簿貼上 或者你也能到擁有的繪圖軟體 如:Photoshop貼上圖片 它會使用剪貼簿的方式貼上圖片 例如我們今天截圖650*435Pixl的圖 你只需要開新檔案 它就會幫你開一個一樣長寬的剪貼簿 貼上的時候就是會符合圖片的大小 {% asset_img 5.jpg 剪貼簿貼上 %}]]></content>
       <tags>
         <tag>工具</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[工具的使用_截圖]]></title>
-    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%96%2F</url>
-    <content type="text"><![CDATA[--- title: 工具的使用_截圖 date: 2018-05-26 16:22:36 tags: - 工具 --- 本站第一篇文章 {% asset_img 1.png %} 今天要介紹截圖工具的使用 首先是截圖的使用方法 筆電與桌機 (筆電) Fn按著不放+右上角的PrintScreen(可能簡寫Ptrsc) {% asset_img 2.jpg 筆電鍵盤按法 %} (桌機) 桌機一般來說只要按住PrintScreen就行了 {% asset_img 3.jpg 桌機鍵盤按法 %} 那麼接下來做什麼呢? 到小畫家貼上就好 如果找不到小畫家呢? {% asset_img 4.jpg 小畫家位置 %} 剪貼簿貼上 或者你也能到擁有的繪圖軟體 如:Photoshop貼上圖片 它會使用剪貼簿的方式貼上圖片 例如我們今天截圖650*435Pixl的圖 你只需要開新檔案 它就會幫你開一個一樣長寬的剪貼簿 貼上的時候就是會符合圖片的大小 {% asset_img 5.jpg 剪貼簿貼上 %}]]></content>
+    <title><![CDATA[工具的使用_截圖2]]></title>
+    <url>%2Fprofile%2F%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8_%E6%88%AA%E5%9C%962%2F</url>
+    <content type="text"><![CDATA[--- title: 工具的使用_截圖2 date: 2018-05-26 16:22:36 tags: - 工具 --- {% asset_img 0.jpg %} 繼上一章的工具的使用後 今天要介紹的是其他軟體的截圖工具 例如我們日常使用的通訊軟體 都有這個功能 {% asset_img 1.jpg %} *** LINE === 這是LINE不久前推出的功能 按下即可截圖 {% asset_img 2.gif %} *** QQ === 也有這個功能 快捷鍵是Ctrl+Alt+A {% asset_img 3.gif %} *** 最後介紹一個頗有知名度的剪輯軟體的公司 ApowerSoft === 這在Google搜尋都能夠找到 它做的這款截圖軟體 只要按下快捷鍵也能立即截圖 更能直接做簡易的編輯 {% asset_img 4.jpg %} 它的功能也更多 能夠用的工具也比較容易操作 這是目前筆者正在使用的截圖工具 有一段免費試用期 {% asset_img 5.gif %} 要注意的是 如果有同時用QQ通訊軟體 他們快捷鍵會衝突 需另外設置]]></content>
       <tags>
         <tag>工具</tag>
       </tags>
