@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JSON物件的取值]]></title>
+    <url>%2Fprofile%2FJSON%E7%89%A9%E4%BB%B6%E7%9A%84%E5%8F%96%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[--- title: JSON物件的取值 date: 2018-07-13 07:56:37 tags: - 筆記 - javascript --- 假使一個物件 var obj = { first: { name: "John", job: "student" }, second: { name: "Mary", job: "teacher" } }; 我們如果想取John這個值 可以用obj["first"].name 或者轉成key的形式取 obj[Object.keys(obj)[0]].name 但是以下錯誤方式是不支援的 obj[0].name 原因在於JSON並非屬於陣列的形式 單純的數字索引沒有辦法做到這一點]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Jquery的find]]></title>
+    <url>%2Fprofile%2FJquery%E7%9A%84find%2F</url>
+    <content type="text"><![CDATA[--- title: Jquery的find date: 2018-07-13 07:56:37 tags: - 筆記 - Jquery --- 再Jquery當中 我們要選一個元素 會用選擇器的方式選取 例如$(".box")選擇class="box"的元素 $(".box #aaa")選擇box裏頭的子元素aaa 那find有什麼作用呢? 相同的情況下 用上述的選擇器達成不就好了嗎? 恩.....在某些情況下 可能會有以下需求 $(".box") .attr("src",$(".box2").attr("src")) .show() .find("#aaa") .hide() .parent() .find("#bbb").html("123") .show() 然後也可以一直點下去這樣鏈接chain的方式書寫 就不用再多寫幾行重複的了 ~~ˋ要知道工程師是很懶的一種生物~~]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>Jquery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[動態產生的物件綁定事件]]></title>
+    <url>%2Fprofile%2F%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9F%E7%9A%84%E7%89%A9%E4%BB%B6%E7%B6%81%E5%AE%9A%E4%BA%8B%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[--- title: 動態產生的物件綁定事件 date: 2018-07-13 07:56:37 tags: - 筆記 - javascript - Jquery --- 假使今天我們有一個按鈕 綁定了click事件 也就是說按下去彈出一個提醒視窗 但是 假如我們動態產生了一些按鈕 那要怎麼給他也賦予這個事件呢? {% asset_img 1.jpg %} 我們發現add產生出來的button都沒有效果 這時候 就必須在動態產生的時候就綁定起來 {% asset_img 2.jpg %} 那有沒有更方便的方法呢? Jquery提供了on可以使用 {% asset_img 3.jpg %} 第二個參數放上我們要監聽的目標 動態產生時 就自動賦予綁定事件 是不是很方便呢?]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+        <tag>Jquery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[變數作用域]]></title>
+    <url>%2Fprofile%2F%E8%AE%8A%E6%95%B8%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[--- title: 變數作用域 date: 2018-07-013 07:56:37 tags: - 筆記 - javascript - Jquery --- 在Jquery中 由$(function(){}) //也就是document.ready的簡寫 包起來的作用域 裏頭的變數被包起來 所以裡面定義的變數 只能在裡面用 我們先看一個例子 {% asset_img 1.jpg %} 但是如果直接定義在裡面 {% asset_img 2.jpg %} 如果要避免這個問題 可以把變數寫在全域也就是(圖一)那樣 或者另外用localStorage.setItem()存起來 存在對應的鍵值 注意,只接受字串,如果不是字串可以借用JSON序列化或反序列化 也就是JSON.stringify()存進去 localStorage.getItem()拿出來時 再JSON.parse()轉回來]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+        <tag>Jquery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript中的append]]></title>
+    <url>%2Fprofile%2Fjavascript%E4%B8%AD%E7%9A%84append%2F</url>
+    <content type="text"><![CDATA[--- title: javascript中的append date: 2018-07-013 07:56:37 tags: - 筆記 - javascript --- 無論是在Jquery還是javascript 用append或appendChild都要小心 以下看一個例子 $(function(){ $("#test2").append($("#test1").find("#box")) }) #box{background:red;width:50px;height:50px;} .test{border:1px solid #000;margin:0 0 30px 0;} 123 id:test1的元素將會跑到test2哦! {% asset_img 1.jpg %} {% asset_img 2.jpg %} --- 要如何避免這種問題呢? 因為append本來就是這種功能 可以另外document.createElement {% asset_img 3.jpg %}]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[隨機產生圖片]]></title>
     <url>%2Fprofile%2F%E9%9A%A8%E6%A9%9F%E7%94%A2%E7%94%9F%E5%9C%96%E7%89%87%2F</url>
     <content type="text"><![CDATA[--- title: 隨機產生圖片 date: 2018-07-06 07:56:37 tags: - 筆記 - javascript - php --- 使用後端語言:PHP 使用前端語言:javascript 環境:能解析PHP(看懂)的作業系統 主題:產生隨機圖片的小作品(迷你版) {% asset_img 1.jpg %} 大致上的做法是HTML跑完後 加載PHP後端的script 接著依據這些資料呈現圖片 *** 其中一個是我們跑的index.php 另外一個網頁是就純PHP echo出資料而已 對 就這樣 {% asset_img 2.jpg %} 用JSONP的方式 將PHP用script的方式加載進來 雖然說是JSONP這種陌生的名詞 但它並非新技術 而是一種運用而已 特別要注意的是 {% asset_img 3.jpg %} 這裡綁定的方法 第二個參數是放函數名稱 也就是只要寫上click_sth就好囉~ 接下來我們直接跳到~~程式碼比較短~~的PHP檔案 {% asset_img 4.jpg %} 我們直接用glob去找該檔案底下的所有資料 因為我們要的只是圖片 所以用了正則表達式判斷 {% asset_img 5.jpg %} 如果正確再加進來我們要的資料 注意如果有/根目錄路徑要再加上\反斜線 png和jpg像這樣的邏輯判斷 中間也不能有空白 會判斷錯誤哦 $則是以前面這個JPG或PNG結尾 {% asset_img 6.jpg %} 第二種情況是如果我們目錄底下又有子目錄(因為它不符合剛剛的正則式判斷) 就在運用剛剛相同的方法 再去把檔案加進來 {% asset_img 7.jpg %} 最後把這個東西echo 起來就好了 因為它是PHP的物件 所以必須用JSON轉換讓其他語言能看懂這是什麼 至於myJSON()就是我們寫在script裏頭的函式 myJSON()是在做什麼呢? 我們回到原先第一個網頁index.pgp *** {% asset_img 8.jpg %} 我們利用Math函式庫裏頭的random()再加上一些數值的運算產生隨機數 接著產生一個新的img元素 放在我們id為test_img的區塊裡頭 接下來我們也在圖片上綁定可以點擊更換圖片的方法 {% asset_img 9.jpg %} 在append之後會返回JQUERY的對象 也就是說 我們在append之後可以再用find去找他底下的子元素 形成這樣的一個很好看的鏈 由於PHP echo myJSON 相當於在script執行了這個函式 把array參數帶進來 那我們這時候就要想辦法保存這個資料 如果以後需要再用到 可以直接提取 就不用每次都跟資料庫或者需要另外做其他事獲取資料 這樣將有助於提升執行的效率 我們可以用localStorage儲存起來 再存取之前 要先把它字串轉換也就是JSON.stringify() 接下來就是最後一個函式click_sth()用來換圖片用的 我們把localStorage存的東西提取出來之後 用JSON.parse解析出原本那個物件 用同樣的方法換照片 {% asset_img 10.jpg %} 接著固定時間換照片就可以了setInterval 一樣也是調用click_sth 也就是click_sth這個函式被重複利用了三次 *** {% asset_img 11.jpg %} 我們來簡單講一下CSS 其中id為test_img這個區塊 想要置中 就直接用margin:auto就行了 裡面還會放圖片 可是你會發現圖片為什麼用margin:auto卻不能置中? {% asset_img 12.jpg %} 那是因為沒有轉換成display:block的緣故 圖片預設是display:inline-block 至於如果要達到垂直置中 最簡單的方法 是用position的方式 直接讓img絕對定位下去做 需要注意的是 他的上一層也必須跟著定位(相對位置) 這樣img才會只在test_img這個區塊裡面做相對位置的變換 CSS裡max與min的寬高設定 如果運用得當 可以再不壓縮圖片與用JS的情況下 讓圖片產生想要的效果 {% asset_img 13.jpg %} 雖然有些圖片還會壓到 但是你不需要再用JS去轉換寬高什麼的 CSS會自動幫你調校 這是最簡單的方法 [以下為連結網頁](http://jack.lionfree.net/game/random_pic/ "Title")]]></content>
