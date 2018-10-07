@@ -332,6 +332,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/對話框Enter的預設行為/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="信">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="記錄日誌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/profile/對話框Enter的預設行為/" itemprop="url">
+                  對話框Enter的預設行為
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2018-07-13 07:56:37" itemprop="dateCreated datePublished" datetime="2018-07-13T07:56:37+08:00">2018-07-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2018-10-07 13:24:11" itemprop="dateModified" datetime="2018-10-07T13:24:11+08:00">2018-10-07</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/profile/對話框Enter的預設行為/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="對話框Enter的預設行為/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在對話輸入的地方<br>Enter常常是預設輸入的行為<br>也就是說  按Enter可以直接將訊息送出去</p>
+<p>但如果是Input 的標籤   雖然可以輸入東西<br>但是只能輸入一行<br>另外又有textarea可以用  但又不是我們需要的<br>於是我們可以將這個對話欄區塊直接改成div標籤<br>只需要另外加上一個屬性<br><img src="/profile/對話框Enter的預設行為/1.jpg"></p>
+<p>可是問題又來了<br>他按Enter會變成跳行<br>而不是送出訊息<br>應該怎麼讓它Enter改成送出的動作<br>如果換行可以用像是「Shift+Enter」去做呢?</p>
+<pre><code>$(&quot;#input_area&quot;).on(&apos;keydown&apos;, function(e)//輸入對話欄
+  {
+    if(e.key == &quot;Enter&quot; &amp;&amp; e.target.value != &quot;&quot;)
+    {
+      if(e.shiftKey)//換行
+      {
+
+      }
+      else
+      {
+         $(&quot;#msg_send&quot;).click();
+         e.preventDefault();
+      }
+
+    }
+  });
+</code></pre><p>寫個按鈕送出訊息事件  可以克服這個問題<br>另外需要辨識Enter鍵還有Shift鍵的shiftKey<br>這邊K有大寫  屬於駝峰式的寫法要注意<br>Enter直接執行送出按鈕的事件(事前送出按鈕已經有另外綁定了onclick事件)</p>
+<img src="/profile/對話框Enter的預設行為/2.jpg">
+<p>e.preventDefault()讓它不去做預設動作<br>也就是取消了它原本「按Enter會換行」這件事<br>這樣就是我們常常看到的<br>按Enter送出訊息<br>按Shift+Enter可以換行而不會直接送出<br>這樣比較直覺的操作了</p>
+<img src="/profile/對話框Enter的預設行為/3.jpg">
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      		
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/JSON物件的取值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1844,239 +2029,6 @@ pr1.then(test2);
 
 
     
-      		
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/原型繼承篇/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="信">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/profile/../../cardmonster/img/card_open.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="記錄日誌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/profile/原型繼承篇/" itemprop="url">
-                  原型繼承篇
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2018-06-05 10:56:37" itemprop="dateCreated datePublished" datetime="2018-06-05T10:56:37+08:00">2018-06-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2018-06-06 00:41:37" itemprop="dateModified" datetime="2018-06-06T00:41:37+08:00">2018-06-06</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/profile/原型繼承篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="原型繼承篇/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有一台車子<br>我們車子有什麼顏色的呢<br>黑色、白色、藍色、紅色….等<br>廠商做車子<br>不同顏色的差在烤漆<br>其他功能一樣<br><del>有哪台同車款的車內部裝潢不一樣的</del><br><img src="/profile/原型繼承篇/1.jpg"><br><img src="/profile/原型繼承篇/2.jpg"></p>
-<p>當我們定義一個Function<br>當我們定義一個陣列<br>當我定義一個字串<br>Function它就繼承了祖先(原型)的方法<br>陣列也是<br>陣列有array各種方法  可以直接運用<br>Function-&gt;Function prototype-&gt;Object prototype<br>arr-&gt;arr prototype-&gt;Array prototype<br>這樣一個一個串連找源頭<br>我們稱之為原型鏈(prototype chain)</p>
-<hr>
-<p>舉例來講  這是一個貓咪的建構函式</p>
-<pre><code>function Cat(name) {
-    this.name = name;
-    this.say = function()
-    {
-       return `Hello, ${this.name}!`;
-    }
-}
-var cat1 = new Cat(&quot;普通的貓&quot;);
-</code></pre><p>當我們使用建構函式時<br>創造一個貓咪的物件<br>它就是參考Cat.prototype的原型去作出一個物件<br>所有屬性也都被存在Cat.prototype裏頭<br>也就是<br>Cat—–&gt;Cat.prototype-&gt;Object proototype</p>
-<p>當我們要調用說話方法時<br>console.log(cat1.say());<br>貓咪正常說話<br>但是時常做的是<br>會把say()方法寫給原型<br>讓每次物件產生的時候  都參照這個原型<br>就會少產生需要的Function<br>像是底下這樣</p>
-<pre><code>function Cat(name) {
-    this.name = name;
-}
-Cat.prototype.say = function()
-{
-    return `Hello, ${this.name}!`;
-}
-var cat1 = new Cat(&quot;普通的貓&quot;);
-</code></pre><p>還記得前面講過的this嗎<br>這個this指向新產生的這個物件(普通的貓)</p>
-<p>當我們想要賦予其它屬性時<br>就必須寫在Cat建構函式裡<br>如果像這樣  這是一隻不會飛的貓</p>
-<pre><code>function Cat(name) {
-    this.name = name;
-}
-Cat.prototype.say = function()
-{
-    return `Hello, ${this.name}!`;
-}
-Cat.skill = function(){ return &quot;不會飛&quot;;};
-var cat1 = new Cat(&quot;普通的貓&quot;);
-
-console.log(cat1.skill()); // skill is not a function
-</code></pre><p>當我們要用cat1.skill()<br>將會出現錯誤訊息<br><img src="/profile/原型繼承篇/3.jpg"></p>
-<blockquote>
-<p> 因為Cat本身只是用來產生物件用<br> 所有的屬性參照  都是看原型<br> 換句煥說  prototype屬性是看這個Cat函式包起來的東西</p>
-</blockquote>
-<p>我們再新增一行</p>
-<pre><code>function Cat(name) {
-    this.name = name;
-}
-Cat.prototype.say = function()
-{
-    return `Hello, ${this.name}!`;
-}
-Cat.prototype.skill = function(){ return &quot;不會飛&quot;;};
-Cat.skill = function(){ return &quot;可能不會飛&quot;;};
-var cat1 = new Cat(&quot;普通的貓&quot;);
-console.log(cat1.skill()); //不會飛
-</code></pre><p>印證參照的是原型<br>直接寫給Cat是無效的<br>或者就直接寫在Cat建構函式裡頭</p>
-<p>接下來讓我們創造一隻會飛的貓<br><img src="/profile/原型繼承篇/4.jpg"><br>一樣是用建構函數開頭</p>
-<pre><code>function Cat(name) {
-    this.name = name;
-}
-Cat.prototype.say = function()
-{
-    return `Hello, ${this.name}!`;
-}
-Cat.prototype.skill = function(){ return &quot;不會飛&quot;;};
-var cat1 = new Cat(&quot;普通的貓&quot;);
-function Happi()
-{
-    Cat.call(this,&quot;哈比&quot;);//我們調用Cat函式的方法給Happi
-}
-var cat2 = new Happi;
-console.log(cat2.skill());// is not a function
-</code></pre><p>現在<br>Happi-&gt;Happi prototype-&gt;Cat-&gt;Cat prototype-&gt;Object prototype<br>也因為Happi沒寫skill方法而無法辨識<br>加上這一段</p>
-<p>Happi.prototype.skill = function(){return “我會飛”};<br>做出了一隻會飛的貓咪</p>
-<p>大概的示意圖<br><img src="/profile/原型繼承篇/5.jpg"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2128,7 +2080,7 @@ console.log(cat2.skill());// is not a function
                 
                   <a href="/profile/archives">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

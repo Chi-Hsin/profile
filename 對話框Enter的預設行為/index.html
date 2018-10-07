@@ -106,29 +106,29 @@
 
 
 
-  <meta name="description" content="假使今天我們有一個按鈕綁定了click事件也就是說按下去彈出一個提醒視窗 但是  假如我們動態產生了一些按鈕那要怎麼給他也賦予這個事件呢?我們發現add產生出來的button都沒有效果這時候  就必須在動態產生的時候就綁定起來 那有沒有更方便的方法呢?Jquery提供了on可以使用 第二個參數放上我們要監聽的目標動態產生時  就自動賦予綁定事件是不是很方便呢?">
+  <meta name="description" content="在對話輸入的地方Enter常常是預設輸入的行為也就是說  按Enter可以直接將訊息送出去 但如果是Input 的標籤   雖然可以輸入東西但是只能輸入一行另外又有textarea可以用  但又不是我們需要的於是我們可以將這個對話欄區塊直接改成div標籤只需要另外加上一個屬性 可是問題又來了他按Enter會變成跳行而不是送出訊息應該怎麼讓它Enter改成送出的動作如果換行可以用像是「Shift+E">
 <meta name="keywords" content="筆記,javascript,Jquery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="動態產生的物件綁定事件">
-<meta property="og:url" content="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/index.html">
+<meta property="og:title" content="對話框Enter的預設行為">
+<meta property="og:url" content="https://chi-hsin.github.io/profile/對話框Enter的預設行為/index.html">
 <meta property="og:site_name" content="記錄日誌">
-<meta property="og:description" content="假使今天我們有一個按鈕綁定了click事件也就是說按下去彈出一個提醒視窗 但是  假如我們動態產生了一些按鈕那要怎麼給他也賦予這個事件呢?我們發現add產生出來的button都沒有效果這時候  就必須在動態產生的時候就綁定起來 那有沒有更方便的方法呢?Jquery提供了on可以使用 第二個參數放上我們要監聽的目標動態產生時  就自動賦予綁定事件是不是很方便呢?">
+<meta property="og:description" content="在對話輸入的地方Enter常常是預設輸入的行為也就是說  按Enter可以直接將訊息送出去 但如果是Input 的標籤   雖然可以輸入東西但是只能輸入一行另外又有textarea可以用  但又不是我們需要的於是我們可以將這個對話欄區塊直接改成div標籤只需要另外加上一個屬性 可是問題又來了他按Enter會變成跳行而不是送出訊息應該怎麼讓它Enter改成送出的動作如果換行可以用像是「Shift+E">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/1.jpg">
-<meta property="og:image" content="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/2.jpg">
-<meta property="og:image" content="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/3.jpg">
-<meta property="og:updated_time" content="2018-07-12T23:40:36.565Z">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/對話框Enter的預設行為/1.jpg">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/對話框Enter的預設行為/2.jpg">
+<meta property="og:image" content="https://chi-hsin.github.io/profile/對話框Enter的預設行為/3.jpg">
+<meta property="og:updated_time" content="2018-10-07T05:24:11.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="動態產生的物件綁定事件">
-<meta name="twitter:description" content="假使今天我們有一個按鈕綁定了click事件也就是說按下去彈出一個提醒視窗 但是  假如我們動態產生了一些按鈕那要怎麼給他也賦予這個事件呢?我們發現add產生出來的button都沒有效果這時候  就必須在動態產生的時候就綁定起來 那有沒有更方便的方法呢?Jquery提供了on可以使用 第二個參數放上我們要監聽的目標動態產生時  就自動賦予綁定事件是不是很方便呢?">
-<meta name="twitter:image" content="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/1.jpg">
+<meta name="twitter:title" content="對話框Enter的預設行為">
+<meta name="twitter:description" content="在對話輸入的地方Enter常常是預設輸入的行為也就是說  按Enter可以直接將訊息送出去 但如果是Input 的標籤   雖然可以輸入東西但是只能輸入一行另外又有textarea可以用  但又不是我們需要的於是我們可以將這個對話欄區塊直接改成div標籤只需要另外加上一個屬性 可是問題又來了他按Enter會變成跳行而不是送出訊息應該怎麼讓它Enter改成送出的動作如果換行可以用像是「Shift+E">
+<meta name="twitter:image" content="https://chi-hsin.github.io/profile/對話框Enter的預設行為/1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://chi-hsin.github.io/profile/動態產生的物件綁定事件/"/>
+  <link rel="canonical" href="https://chi-hsin.github.io/profile/對話框Enter的預設行為/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>動態產生的物件綁定事件 | 記錄日誌</title>
+  <title>對話框Enter的預設行為 | 記錄日誌</title>
   
 
 
@@ -327,8 +327,8 @@
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://chi-hsin.github.io/profile/動態產生的物件綁定事件/';
-        this.page.identifier = '動態產生的物件綁定事件/';
+        this.page.url = 'https://chi-hsin.github.io/profile/對話框Enter的預設行為/';
+        this.page.identifier = '對話框Enter的預設行為/';
     };
     (function () {
         var d = document, s = d.createElement('script');
@@ -354,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/動態產生的物件綁定事件/">
+    <link itemprop="mainEntityOfPage" href="https://chi-hsin.github.io/profile/profile/對話框Enter的預設行為/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="信">
@@ -371,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">動態產生的物件綁定事件
+          <h1 class="post-title" itemprop="name headline">對話框Enter的預設行為
               
             
           </h1>
@@ -396,12 +396,24 @@
                 
               
 
-              <time title="創建時間：2018-07-13 07:56:37 / 修改時間：07:40:36" itemprop="dateCreated datePublished" datetime="2018-07-13T07:56:37+08:00">2018-07-13</time>
+              <time title="創建時間：2018-07-13 07:56:37" itemprop="dateCreated datePublished" datetime="2018-07-13T07:56:37+08:00">2018-07-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2018-10-07 13:24:11" itemprop="dateModified" datetime="2018-10-07T13:24:11+08:00">2018-10-07</time>
               
             
           </span>
@@ -415,9 +427,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/profile/動態產生的物件綁定事件/#comments" itemprop="discussionUrl">
+                <a href="/profile/對話框Enter的預設行為/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="動態產生的物件綁定事件/" itemprop="commentCount"></span>
+                        data-disqus-identifier="對話框Enter的預設行為/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -445,10 +457,29 @@
       
 
       
-        <p>假使今天我們有一個按鈕<br>綁定了click事件<br>也就是說按下去彈出一個提醒視窗</p>
-<p>但是  假如我們動態產生了一些按鈕<br>那要怎麼給他也賦予這個事件呢?<br><img src="/profile/動態產生的物件綁定事件/1.jpg"><br>我們發現add產生出來的button都沒有效果<br>這時候  就必須在動態產生的時候就綁定起來<br><img src="/profile/動態產生的物件綁定事件/2.jpg"></p>
-<p>那有沒有更方便的方法呢?<br>Jquery提供了on可以使用<br><img src="/profile/動態產生的物件綁定事件/3.jpg"></p>
-<p>第二個參數放上我們要監聽的目標<br>動態產生時  就自動賦予綁定事件<br>是不是很方便呢?</p>
+        <p>在對話輸入的地方<br>Enter常常是預設輸入的行為<br>也就是說  按Enter可以直接將訊息送出去</p>
+<p>但如果是Input 的標籤   雖然可以輸入東西<br>但是只能輸入一行<br>另外又有textarea可以用  但又不是我們需要的<br>於是我們可以將這個對話欄區塊直接改成div標籤<br>只需要另外加上一個屬性<br><img src="/profile/對話框Enter的預設行為/1.jpg"></p>
+<p>可是問題又來了<br>他按Enter會變成跳行<br>而不是送出訊息<br>應該怎麼讓它Enter改成送出的動作<br>如果換行可以用像是「Shift+Enter」去做呢?</p>
+<pre><code>$(&quot;#input_area&quot;).on(&apos;keydown&apos;, function(e)//輸入對話欄
+  {
+    if(e.key == &quot;Enter&quot; &amp;&amp; e.target.value != &quot;&quot;)
+    {
+      if(e.shiftKey)//換行
+      {
+
+      }
+      else
+      {
+         $(&quot;#msg_send&quot;).click();
+         e.preventDefault();
+      }
+
+    }
+  });
+</code></pre><p>寫個按鈕送出訊息事件  可以克服這個問題<br>另外需要辨識Enter鍵還有Shift鍵的shiftKey<br>這邊K有大寫  屬於駝峰式的寫法要注意<br>Enter直接執行送出按鈕的事件(事前送出按鈕已經有另外綁定了onclick事件)</p>
+<img src="/profile/對話框Enter的預設行為/2.jpg">
+<p>e.preventDefault()讓它不去做預設動作<br>也就是取消了它原本「按Enter會換行」這件事<br>這樣就是我們常常看到的<br>按Enter送出訊息<br>按Shift+Enter可以換行而不會直接送出<br>這樣比較直覺的操作了</p>
+<img src="/profile/對話框Enter的預設行為/3.jpg">
 
       
     </div>
@@ -486,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/profile/變數作用域/" rel="next" title="變數作用域">
-                <i class="fa fa-chevron-left"></i> 變數作用域
+              <a href="/profile/JSON物件的取值/" rel="next" title="JSON物件的取值">
+                <i class="fa fa-chevron-left"></i> JSON物件的取值
               </a>
             
           </div>
@@ -495,10 +526,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/profile/Jquery的find/" rel="prev" title="Jquery的find">
-                Jquery的find <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -801,9 +828,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://chi-hsin.github.io/profile/動態產生的物件綁定事件/';
-        this.page.identifier = '動態產生的物件綁定事件/';
-        this.page.title = '動態產生的物件綁定事件';
+        this.page.url = 'https://chi-hsin.github.io/profile/對話框Enter的預設行為/';
+        this.page.identifier = '對話框Enter的預設行為/';
+        this.page.title = '對話框Enter的預設行為';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
